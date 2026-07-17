@@ -4,14 +4,14 @@ import { useState } from "react";
 import { BookAppointmentDialog } from "@/components/site/BookAppointment";
 
 const nav = [
-  { label: "About", href: "/" },
-  { label: "Robotic Knee", href: "/" },
-  { label: "Robotic Hip", href: "/" },
-  { label: "Arthroscopy", href: "/" },
-  { label: "Shoulder & Elbow", href: "/" },
-  { label: "Patient Resources", href: "/" },
-  { label: "Locations", href: "/" },
-  { label: "Contact", href: "/" },
+  { label: "About", href: "/about" as const },
+  { label: "Robotic Knee", href: "/robotic-knee" as const },
+  { label: "Robotic Hip", href: "/robotic-hip" as const },
+  { label: "Arthroscopy", href: "/arthroscopy" as const },
+  { label: "Shoulder & Elbow", href: "/shoulder-elbow" as const },
+  { label: "Patient Resources", href: "/patient-resources" as const },
+  { label: "Locations", href: "/locations" as const },
+  { label: "Contact", href: "/contact" as const },
 ];
 
 export function Header() {

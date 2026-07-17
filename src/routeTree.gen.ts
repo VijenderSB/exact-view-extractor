@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ShoulderElbowRouteImport } from './routes/shoulder-elbow'
+import { Route as RoboticKneeRouteImport } from './routes/robotic-knee'
+import { Route as RoboticHipRouteImport } from './routes/robotic-hip'
+import { Route as PatientResourcesRouteImport } from './routes/patient-resources'
+import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ShoulderElbowRoute = ShoulderElbowRouteImport.update({
+  id: '/shoulder-elbow',
+  path: '/shoulder-elbow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoboticKneeRoute = RoboticKneeRouteImport.update({
+  id: '/robotic-knee',
+  path: '/robotic-knee',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoboticHipRoute = RoboticHipRouteImport.update({
+  id: '/robotic-hip',
+  path: '/robotic-hip',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatientResourcesRoute = PatientResourcesRouteImport.update({
+  id: '/patient-resources',
+  path: '/patient-resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRoute = LocationsRouteImport.update({
+  id: '/locations',
+  path: '/locations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArthroscopyRoute = ArthroscopyRouteImport.update({
+  id: '/arthroscopy',
+  path: '/arthroscopy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/arthroscopy': typeof ArthroscopyRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/patient-resources': typeof PatientResourcesRoute
+  '/robotic-hip': typeof RoboticHipRoute
+  '/robotic-knee': typeof RoboticKneeRoute
+  '/shoulder-elbow': typeof ShoulderElbowRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/arthroscopy': typeof ArthroscopyRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/patient-resources': typeof PatientResourcesRoute
+  '/robotic-hip': typeof RoboticHipRoute
+  '/robotic-knee': typeof RoboticKneeRoute
+  '/shoulder-elbow': typeof ShoulderElbowRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/arthroscopy': typeof ArthroscopyRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/patient-resources': typeof PatientResourcesRoute
+  '/robotic-hip': typeof RoboticHipRoute
+  '/robotic-knee': typeof RoboticKneeRoute
+  '/shoulder-elbow': typeof ShoulderElbowRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/arthroscopy'
+    | '/contact'
+    | '/locations'
+    | '/patient-resources'
+    | '/robotic-hip'
+    | '/robotic-knee'
+    | '/shoulder-elbow'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/arthroscopy'
+    | '/contact'
+    | '/locations'
+    | '/patient-resources'
+    | '/robotic-hip'
+    | '/robotic-knee'
+    | '/shoulder-elbow'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/arthroscopy'
+    | '/contact'
+    | '/locations'
+    | '/patient-resources'
+    | '/robotic-hip'
+    | '/robotic-knee'
+    | '/shoulder-elbow'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ArthroscopyRoute: typeof ArthroscopyRoute
+  ContactRoute: typeof ContactRoute
+  LocationsRoute: typeof LocationsRoute
+  PatientResourcesRoute: typeof PatientResourcesRoute
+  RoboticHipRoute: typeof RoboticHipRoute
+  RoboticKneeRoute: typeof RoboticKneeRoute
+  ShoulderElbowRoute: typeof ShoulderElbowRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/shoulder-elbow': {
+      id: '/shoulder-elbow'
+      path: '/shoulder-elbow'
+      fullPath: '/shoulder-elbow'
+      preLoaderRoute: typeof ShoulderElbowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robotic-knee': {
+      id: '/robotic-knee'
+      path: '/robotic-knee'
+      fullPath: '/robotic-knee'
+      preLoaderRoute: typeof RoboticKneeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robotic-hip': {
+      id: '/robotic-hip'
+      path: '/robotic-hip'
+      fullPath: '/robotic-hip'
+      preLoaderRoute: typeof RoboticHipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/patient-resources': {
+      id: '/patient-resources'
+      path: '/patient-resources'
+      fullPath: '/patient-resources'
+      preLoaderRoute: typeof PatientResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations': {
+      id: '/locations'
+      path: '/locations'
+      fullPath: '/locations'
+      preLoaderRoute: typeof LocationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arthroscopy': {
+      id: '/arthroscopy'
+      path: '/arthroscopy'
+      fullPath: '/arthroscopy'
+      preLoaderRoute: typeof ArthroscopyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ArthroscopyRoute: ArthroscopyRoute,
+  ContactRoute: ContactRoute,
+  LocationsRoute: LocationsRoute,
+  PatientResourcesRoute: PatientResourcesRoute,
+  RoboticHipRoute: RoboticHipRoute,
+  RoboticKneeRoute: RoboticKneeRoute,
+  ShoulderElbowRoute: ShoulderElbowRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
