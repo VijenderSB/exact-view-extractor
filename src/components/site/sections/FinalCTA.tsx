@@ -1,4 +1,6 @@
 import { Phone, MessageCircle, Calendar, ArrowRight } from "lucide-react";
+import { BookAppointmentDialog } from "@/components/site/BookAppointment";
+
 
 export function FinalCTA() {
   return (
@@ -16,10 +18,12 @@ export function FinalCTA() {
             </p>
           </div>
           <div className="lg:col-span-5 grid gap-3">
-            <a href="#" className="flex items-center justify-between rounded-2xl bg-background text-foreground px-6 py-4 hover:translate-y-[-1px] transition shadow-glow">
-              <span className="inline-flex items-center gap-3 font-medium"><Calendar className="h-5 w-5 text-primary" /> Book Appointment</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <BookAppointmentDialog>
+              <button className="flex items-center justify-between rounded-2xl bg-background text-foreground px-6 py-4 hover:translate-y-[-1px] transition shadow-glow w-full text-left">
+                <span className="inline-flex items-center gap-3 font-medium"><Calendar className="h-5 w-5 text-primary" /> Book Appointment</span>
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </BookAppointmentDialog>
             <a href="tel:+911234567890" className="flex items-center justify-between rounded-2xl border border-white/25 hover:bg-white/10 transition px-6 py-4">
               <span className="inline-flex items-center gap-3 font-medium"><Phone className="h-5 w-5" /> Call the clinic</span>
               <ArrowRight className="h-4 w-4" />

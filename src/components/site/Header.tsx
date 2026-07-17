@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, MapPin, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { BookAppointmentDialog } from "@/components/site/BookAppointment";
 
 const nav = [
   { label: "About", href: "/" },
@@ -26,7 +27,9 @@ export function Header() {
           <div className="flex items-center gap-4 ml-auto">
             <a href="tel:+911234567890" className="inline-flex items-center gap-1.5 hover:opacity-80 transition"><Phone className="h-3.5 w-3.5" /> Call</a>
             <a href="https://wa.me/911234567890" className="inline-flex items-center gap-1.5 hover:opacity-80 transition"><MessageCircle className="h-3.5 w-3.5" /> WhatsApp</a>
-            <a href="#book" className="hidden sm:inline-flex items-center rounded-full bg-background/15 hover:bg-background/25 transition px-3 py-1 font-medium">Request Callback</a>
+            <BookAppointmentDialog>
+              <button className="hidden sm:inline-flex items-center rounded-full bg-background/15 hover:bg-background/25 transition px-3 py-1 font-medium">Request Callback</button>
+            </BookAppointmentDialog>
           </div>
         </div>
       </div>
@@ -50,9 +53,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="#book" className="hidden md:inline-flex items-center rounded-full bg-gradient-brand text-primary-foreground text-sm font-medium px-5 py-2.5 shadow-elegant hover:shadow-glow transition-all">
-            Book Appointment
-          </a>
+          <BookAppointmentDialog>
+            <button className="hidden md:inline-flex items-center rounded-full bg-gradient-brand text-primary-foreground text-sm font-medium px-5 py-2.5 shadow-elegant hover:shadow-glow transition-all">
+              Book Appointment
+            </button>
+          </BookAppointmentDialog>
           <button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-border">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -65,9 +70,11 @@ export function Header() {
             {nav.map((item) => (
               <Link key={item.label} to={item.href} className="text-sm text-foreground py-1.5" onClick={() => setOpen(false)}>{item.label}</Link>
             ))}
-            <a href="#book" className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-brand text-primary-foreground text-sm font-medium px-5 py-3">
-              Book Appointment
-            </a>
+            <BookAppointmentDialog>
+              <button className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-brand text-primary-foreground text-sm font-medium px-5 py-3">
+                Book Appointment
+              </button>
+            </BookAppointmentDialog>
           </div>
         </div>
       )}
