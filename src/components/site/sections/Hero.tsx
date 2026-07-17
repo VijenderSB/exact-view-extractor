@@ -1,4 +1,4 @@
-import heroImg from "@/assets/dr-tomar-portrait.png";
+import heroImg from "@/assets/hero-surgeon.jpg";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 export function Hero() {
@@ -39,16 +39,16 @@ export function Hero() {
         </div>
 
         <div className="lg:col-span-5 relative">
-          <div className="relative">
+          <div className="relative rounded-3xl overflow-hidden shadow-elegant ring-1 ring-white/10">
             <img
               src={heroImg}
-              alt="Dr. L. Tomar, Orthopedic Surgeon"
+              alt="Dr. L. Tomar with a knee joint model and robotic surgical planning visualisation"
               width={1600}
               height={1408}
-              className="w-full h-auto object-contain relative z-10"
+              className="w-full h-auto object-cover"
             />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[oklch(0.22_0.10_285/0.55)] via-transparent to-transparent" />
           </div>
-
 
           {/* floating stat */}
           <div className="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-background text-foreground p-4 pr-6 shadow-elegant">
