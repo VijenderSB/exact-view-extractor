@@ -11,6 +11,7 @@ import { Journey } from "@/components/site/sections/Journey";
 import { Outstation } from "@/components/site/sections/Outstation";
 import { FAQ } from "@/components/site/sections/FAQ";
 import { FinalCTA } from "@/components/site/sections/FinalCTA";
+import { AppointmentSection } from "@/components/site/sections/AppointmentSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,6 +41,7 @@ function Home() {
         <Journey />
         <Outstation />
         <FAQ />
+        <AppointmentSection />
         <FinalCTA />
       </main>
       <Footer />
