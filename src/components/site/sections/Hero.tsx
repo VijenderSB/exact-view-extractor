@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-surgeon.jpg";
+import heroImg from "@/assets/dr-tomar-portrait.png";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 export function Hero() {
