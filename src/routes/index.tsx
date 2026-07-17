@@ -1,24 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { Hero } from "@/components/site/sections/Hero";
+import { TrustStrip } from "@/components/site/sections/TrustStrip";
+import { RoboticFlagship } from "@/components/site/sections/RoboticFlagship";
+import { SymptomGrid } from "@/components/site/sections/SymptomGrid";
+import { AboutDoctor } from "@/components/site/sections/AboutDoctor";
+import { Comparison } from "@/components/site/sections/Comparison";
+import { Journey } from "@/components/site/sections/Journey";
+import { Outstation } from "@/components/site/sections/Outstation";
+import { FAQ } from "@/components/site/sections/FAQ";
+import { FinalCTA } from "@/components/site/sections/FinalCTA";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Dr. L. Tomar — Robotic Knee & Hip Replacement Surgery, Delhi NCR" },
+      { name: "description", content: "Advanced robotic knee and hip replacement surgery in Delhi NCR. Personalised evaluation, technology-assisted surgical planning and comprehensive recovery support with Dr. L. Tomar." },
+      { property: "og:title", content: "Dr. L. Tomar — Robotic Knee & Hip Replacement Surgery" },
+      { property: "og:description", content: "Personalised evaluation and robotic-assisted joint replacement care in Delhi NCR." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <TrustStrip />
+        <RoboticFlagship />
+        <SymptomGrid />
+        <AboutDoctor />
+        <Comparison />
+        <Journey />
+        <Outstation />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
     </div>
   );
 }
