@@ -29,12 +29,12 @@ export type Procedure = {
   faqs: { q: string; a: string }[];
   banner: string;
   testimonialTopic:
-    | "robotic"
+    | "specializations"
     | "knee"
     | "hip"
     | "shoulder"
     | "elbow"
-    | "sports"
+    | "arthroscopy"
     | "trauma"
     | "specializations";
 };
@@ -102,7 +102,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("robotic joint replacement"),
     banner: bannerRobotic,
-    testimonialTopic: "robotic",
+    testimonialTopic: "specializations",
   },
   {
     slug: "computer-assisted-surgery",
@@ -136,7 +136,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("computer-assisted surgery"),
     banner: bannerRobotic,
-    testimonialTopic: "robotic",
+    testimonialTopic: "specializations",
   },
   {
     slug: "revision-joint-replacement",
@@ -172,7 +172,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("revision joint replacement"),
     banner: bannerRobotic,
-    testimonialTopic: "robotic",
+    testimonialTopic: "specializations",
   },
 
   // Knee
@@ -314,7 +314,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("ACL / PCL reconstruction"),
     banner: bannerArthroscopy,
-    testimonialTopic: "sports",
+    testimonialTopic: "arthroscopy",
   },
   {
     slug: "meniscus-cartilage-repair",
@@ -347,7 +347,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("meniscus and cartilage surgery"),
     banner: bannerArthroscopy,
-    testimonialTopic: "sports",
+    testimonialTopic: "arthroscopy",
   },
   {
     slug: "high-tibial-osteotomy",
@@ -741,7 +741,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("sports injury surgery"),
     banner: bannerSports,
-    testimonialTopic: "sports",
+    testimonialTopic: "arthroscopy",
   },
   {
     slug: "cartilage-repair",
@@ -773,7 +773,7 @@ export const procedures: Procedure[] = [
     ],
     faqs: genericFaqs("cartilage repair surgery"),
     banner: bannerArthroscopy,
-    testimonialTopic: "sports",
+    testimonialTopic: "arthroscopy",
   },
   {
     slug: "complex-fracture-management",
