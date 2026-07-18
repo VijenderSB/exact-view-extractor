@@ -34,18 +34,19 @@ export function PageHero({ eyebrow, title, description, breadcrumb, image, image
         </div>
         {image && (
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl overflow-hidden shadow-elegant ring-1 ring-border">
+            <div className="relative rounded-3xl overflow-hidden shadow-elegant ring-1 ring-border bg-card">
               <img
                 src={image}
                 alt={imageAlt ?? title}
                 width={1536}
                 height={1024}
                 loading="lazy"
-                className="w-full h-auto object-cover aspect-[3/2]"
+                className={`w-full h-auto aspect-[3/2] ${imageFit === "contain" ? "object-contain object-center bg-gradient-soft" : "object-cover"}`}
               />
-              <div aria-hidden className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-teal/10" />
+              <div aria-hidden className={`absolute inset-0 ${imageFit === "contain" ? "" : "bg-gradient-to-tr from-primary/20 via-transparent to-teal/10"}`} />
             </div>
           </div>
+
         )}
       </div>
     </section>
