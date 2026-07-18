@@ -1,10 +1,12 @@
 import { GraduationCap, Award, Building2, HeartPulse, ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import drTomarPortrait from "@/assets/dr-tomar-portrait.jpg";
 
 const points = [
-  { icon: GraduationCap, title: "Qualifications", text: "MBBS, MS Orthopaedics, MCh with sub-specialty fellowship training in joint replacement." },
-  { icon: Award, title: "Clinical Focus", text: "Robotic knee and hip replacement, complex and revision joint surgery, arthroscopy." },
-  { icon: Building2, title: "Hospital Association", text: "Consultant at leading multi-specialty hospitals across Delhi NCR." },
-  { icon: HeartPulse, title: "Care Philosophy", text: "Non-surgical options considered first. Surgery recommended only when clearly indicated." },
+  { icon: GraduationCap, title: "Qualifications", text: "MBBS, MS (Ortho), MCh Orthopaedics — University of Dundee, Scotland, UK. Fellowships FICS (USA) & FASIF (AO Switzerland)." },
+  { icon: Award, title: "Clinical Focus", text: "Robotic & computer-navigated knee and hip replacement, complex primary and revision arthroplasty, spine surgery." },
+  { icon: Building2, title: "Hospital Association", text: "Vice Chairman & Unit Head, Orthopaedic & Joint Replacement, Max Super Speciality Hospital, Patparganj, Delhi." },
+  { icon: HeartPulse, title: "Care Philosophy", text: "Non-surgical options first. Surgery recommended only when clearly indicated — with full patient understanding." },
 ];
 
 export function AboutDoctor() {
@@ -13,12 +15,17 @@ export function AboutDoctor() {
       <div className="grid gap-14 lg:grid-cols-12 items-center">
         <div className="lg:col-span-5">
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-elegant">
-            <div className="absolute inset-0 bg-gradient-brand" />
-            <div className="absolute inset-0 opacity-90" style={{ background: "radial-gradient(120% 80% at 30% 20%, transparent, oklch(0.18 0.06 285 / 0.7))" }} />
+            <img
+              src={drTomarPortrait}
+              alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.18_0.06_285/0.85)] via-[oklch(0.22_0.08_285/0.35)] to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-8 text-primary-foreground">
-              <p className="text-xs uppercase tracking-[0.2em] opacity-80">Consultant Orthopaedic Surgeon</p>
+              <p className="text-xs uppercase tracking-[0.2em] opacity-85">Vice Chairman, Orthopaedics — Max Patparganj</p>
               <p className="mt-3 font-display text-3xl">Dr. L. Tomar</p>
-              <p className="mt-2 text-sm opacity-85 max-w-xs">Robotic joint replacement, complex reconstruction & sports orthopaedics.</p>
+              <p className="mt-2 text-sm opacity-90 max-w-xs">MS, MCh (Dundee, UK) · FICS (USA) · FASIF (AO Switzerland)</p>
             </div>
           </div>
         </div>
@@ -26,10 +33,11 @@ export function AboutDoctor() {
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold">About the surgeon</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl lg:text-5xl leading-tight">
-            Two decades dedicated to <span className="text-gradient-brand">joint replacement excellence</span>
+            24+ years dedicated to <span className="text-gradient-brand">joint replacement excellence</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-            Dr. L. Tomar is a senior orthopaedic surgeon with focused expertise in robotic knee and hip replacement. His practice is built around individualised evaluation, evidence-led decisions and clear patient communication.
+            Dr. L. Tomar is Vice Chairman & Unit Head of the Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi.
+            President-Elect of the Delhi Orthopaedic Association (2025–26), with more than 20,000 surgeries — including 1,500+ hip and knee replacements — his practice is anchored in computer-navigated, minimally invasive joint replacement.
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -44,11 +52,12 @@ export function AboutDoctor() {
             ))}
           </div>
 
-          <a href="#" className="mt-10 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-glow transition">
+          <Link to="/about" className="mt-10 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-glow transition">
             Read full profile <ArrowUpRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
   );
 }
+
