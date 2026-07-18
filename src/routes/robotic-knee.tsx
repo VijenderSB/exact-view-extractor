@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-robotic-knee.jpg";
+import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
@@ -43,7 +43,7 @@ function RoboticKneePage() {
         eyebrow="Robotic Knee Replacement"
         title="A knee replacement designed around your anatomy — not the other way around."
         description="Robotic-assisted total and partial knee replacement uses your own 3D anatomy to plan every cut, every degree of alignment and every ligament balance point — before a single incision is made."
-      image={bannerImg}
+      image={heroImg.url}
       />
 
       <section className="py-20">

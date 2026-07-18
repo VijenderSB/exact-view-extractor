@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-robotic-hip.jpg";
+import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
@@ -43,7 +43,7 @@ function RoboticHipPage() {
         eyebrow="Robotic Hip Replacement"
         title="A hip that feels like it belongs to you."
         description="Robotic-assisted total hip replacement combines 3D pre-operative planning with intra-operative precision — restoring leg length, hip biomechanics and long-term mobility with confidence."
-      image={bannerImg}
+      image={heroImg.url}
       />
 
       <section className="py-20">
