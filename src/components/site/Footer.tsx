@@ -62,6 +62,7 @@ const columns: Col[] = [
       { label: "About Dr. Tomar", to: "/about" },
       { label: "All Specializations", to: "/specializations" },
       { label: "Patient Resources", to: "/patient-resources" },
+      { label: "Cities", to: "/cities" },
       { label: "Locations", to: "/locations" },
       { label: "Contact Us", to: "/contact" },
     ],
