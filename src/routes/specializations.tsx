@@ -53,6 +53,7 @@ const groups: Group[] = [
     icon: Bone,
     title: "Knee Surgery",
     accent: "teal",
+    href: "/knee",
     items: [
       "Total Knee Replacement",
       "Partial Knee Replacement (Unicompartmental)",
@@ -73,6 +74,7 @@ const groups: Group[] = [
     icon: CircleDot,
     title: "Hip Surgery",
     accent: "primary",
+    href: "/hip",
     items: [
       "Robotic Hip Replacement",
       "Total Hip Replacement",
@@ -89,6 +91,7 @@ const groups: Group[] = [
     icon: Activity,
     title: "Shoulder Surgery",
     accent: "teal",
+    href: "/shoulder",
     items: [
       "Shoulder Replacement Surgery",
       "Reverse Shoulder Replacement",
@@ -105,6 +108,7 @@ const groups: Group[] = [
     icon: Dumbbell,
     title: "Elbow Surgery",
     accent: "primary",
+    href: "/elbow",
     items: [
       "Elbow Replacement Surgery",
       "Elbow Arthroscopy",
@@ -118,6 +122,7 @@ const groups: Group[] = [
     icon: HeartPulse,
     title: "Sports Injury & Arthroscopy",
     accent: "teal",
+    href: "/sports-injury",
     items: [
       "ACL Reconstruction",
       "PCL Reconstruction",
@@ -135,6 +140,7 @@ const groups: Group[] = [
     icon: ShieldPlus,
     title: "Trauma & Fracture Care",
     accent: "primary",
+    href: "/trauma",
     items: [
       "Complex Fracture Management",
       "Pelvic & Acetabular Fracture Surgery",
@@ -148,6 +154,7 @@ const groups: Group[] = [
     icon: Stethoscope,
     title: "Orthopaedic Conditions Treated",
     accent: "teal",
+    href: "/conditions",
     items: [
       "Knee Arthritis",
       "Hip Arthritis",
