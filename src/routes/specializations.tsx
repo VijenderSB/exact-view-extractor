@@ -177,11 +177,12 @@ function SpecializationsPage() {
 
       <section className="py-20">
         <div className="container-page space-y-16">
-          {groups.map(({ icon: Icon, title, intro, accent, items }) => {
+          {groups.map(({ id, icon: Icon, title, intro, accent, items }) => {
             const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
             const accentDot = accent === "primary" ? "text-primary" : "text-teal";
             return (
-              <div key={title}>
+              <div key={title} id={id} className="scroll-mt-28">
+
                 <div className="flex items-start gap-4">
                   <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accentBg} shrink-0`}>
                     <Icon className="h-6 w-6" />
