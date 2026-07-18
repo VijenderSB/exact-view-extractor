@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-trauma.jpg";
 import { ShieldPlus } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/trauma")({
   head: () => ({
@@ -51,6 +52,7 @@ export const Route = createFileRoute("/trauma")({
         { q: "How long is the recovery after complex fracture surgery?", a: "Bone healing typically takes 3–6 months, but return to daily activities and work often happens much earlier with structured physiotherapy." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["trauma"]}
       />
 
   ),

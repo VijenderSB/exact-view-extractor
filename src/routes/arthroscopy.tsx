@@ -35,6 +35,7 @@ function ArthroscopyPage() {
         title="Keyhole surgery for the active life."
         description="Arthroscopy uses tiny incisions and a high-definition camera to diagnose and treat joint problems with minimal disruption — smaller scars, less pain, and a faster return to sport, work and everyday movement."
       image={bannerImg}
+      testimonials={testimonialsByTopic["arthroscopy"]}
       />
 
       <section className="py-20">

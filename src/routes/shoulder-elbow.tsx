@@ -35,6 +35,7 @@ function ShoulderPage() {
         title="Freedom to reach, lift, throw and rest — without pain."
         description="From common overuse injuries to complex reconstructive surgery, Dr. Tomar's shoulder and elbow practice covers the full spectrum — always weighted toward the least invasive option that will work."
       image={bannerImg}
+      testimonials={testimonialsByTopic["shoulder-elbow"]}
       />
 
       <section className="py-20">

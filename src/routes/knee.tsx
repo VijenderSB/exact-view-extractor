@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-knee.jpg";
 import { Bone } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/knee")({
   head: () => ({
@@ -55,6 +56,7 @@ export const Route = createFileRoute("/knee")({
         { q: "Can I sit cross-legged or squat afterwards?", a: "High-flex implants and modern techniques allow deep bending for most patients, but this depends on your anatomy, muscle strength and pre-op flexibility." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["knee"]}
       />
 
   ),

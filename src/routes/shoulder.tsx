@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-shoulder.jpg";
 import { Activity } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/shoulder")({
   head: () => ({
@@ -49,6 +50,7 @@ export const Route = createFileRoute("/shoulder")({
         { q: "Can I sleep on my side after shoulder surgery?", a: "Sleeping on the operated side is avoided for the first six weeks. A supportive sling and pillow set-up keep the shoulder protected while it heals." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["shoulder"]}
       />
 
   ),

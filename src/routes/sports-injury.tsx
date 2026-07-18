@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-sports-injury.jpg";
 import { HeartPulse } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/sports-injury")({
   head: () => ({
@@ -54,6 +55,7 @@ export const Route = createFileRoute("/sports-injury")({
         { q: "Can I go back to the same sport?", a: "Most recreational athletes return to their sport at their previous level. Return in professional or contact sport requires a structured, criteria-based rehab programme." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["sports-injury"]}
       />
 
   ),

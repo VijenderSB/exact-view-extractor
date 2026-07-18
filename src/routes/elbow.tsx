@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-elbow.jpg";
 import { Dumbbell } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/elbow")({
   head: () => ({
@@ -47,6 +48,7 @@ export const Route = createFileRoute("/elbow")({
         { q: "Is elbow ligament reconstruction only for athletes?", a: "It's most common in throwing athletes, but any patient with instability from a torn medial or lateral collateral ligament can benefit from reconstruction to restore reliable elbow function." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["elbow"]}
       />
 
   ),
