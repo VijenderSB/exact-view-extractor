@@ -92,11 +92,11 @@ function AboutPage() {
               <p className="text-xs uppercase tracking-[0.24em] opacity-80">At a glance</p>
               <div className="mt-6 grid grid-cols-2 gap-6">
                 <div>
-                  <div className="font-display text-4xl">24+</div>
+                  <div className="font-display text-4xl">32+</div>
                   <div className="text-sm opacity-90 mt-1">Years experience</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl">20,000+</div>
+                  <div className="font-display text-4xl">30,000+</div>
                   <div className="text-sm opacity-90 mt-1">Surgeries performed</div>
                 </div>
                 <div>
