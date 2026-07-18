@@ -3,6 +3,7 @@ import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock } from "@/components/site/ContentBlocks";
 import { conditions, getCondition } from "@/data/conditions";
 
 export const Route = createFileRoute("/conditions/$slug")({
