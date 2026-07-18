@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-contact-clinic.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock } from "@/components/site/ContentBlocks";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { AppointmentForm } from "@/components/site/AppointmentForm";
 
