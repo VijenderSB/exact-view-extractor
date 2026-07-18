@@ -21,22 +21,23 @@ export const Route = createFileRoute("/locations")({
 
 const locations = [
   {
-    name: "Main Clinic — South Delhi",
-    address: "Address line 1, South Delhi, New Delhi 110000",
-    hours: "Mon – Sat, 10:00 AM – 6:00 PM",
-    phone: "+91 12345 67890",
+    name: "Tomar Orthopaedics — Vikas Marg",
+    address: "90, New Rajdhani Enclave, Vikas Marg, Delhi – 110092",
+    hours: "Mon – Sat, 10:00 AM – 2:00 PM & 6:00 PM – 8:00 PM",
+    phone: "+91 99100 00159",
+    altPhone: "+91 98101 31676",
+    mapEmbed:
+      "https://www.google.com/maps?q=Tomar+Orthopaedics+90+New+Rajdhani+Enclave+Vikas+Marg+Delhi+110092&output=embed",
   },
   {
-    name: "Partner Hospital — Gurgaon",
-    address: "Sector XX, Gurgaon, Haryana 122000",
-    hours: "Tue & Fri, 4:00 PM – 7:00 PM",
-    phone: "+91 12345 67890",
-  },
-  {
-    name: "Partner Hospital — Noida",
-    address: "Sector XX, Noida, Uttar Pradesh 201301",
-    hours: "Wed, 4:00 PM – 7:00 PM",
-    phone: "+91 12345 67890",
+    name: "Max Super Speciality Hospital — Patparganj",
+    address:
+      "Room No. 1023, Ground Floor, East Wing, Max Super Speciality Hospital, I.P. Extension, Patparganj, New Delhi – 110092",
+    hours: "By appointment — OPD days confirmed at booking",
+    phone: "+91 99100 00159",
+    altPhone: "+91 98101 31676",
+    mapEmbed:
+      "https://www.google.com/maps?q=Max+Super+Speciality+Hospital+Patparganj+IP+Extension+New+Delhi+110092&output=embed",
   },
 ];
 
@@ -51,9 +52,9 @@ function LocationsPage() {
       />
 
       <section className="py-20">
-        <div className="container-page grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="container-page grid gap-6 md:grid-cols-2">
           {locations.map((loc) => (
-            <div key={loc.name} className="rounded-2xl border border-border bg-card p-6 shadow-card">
+            <div key={loc.name} className="rounded-2xl border border-border bg-card p-6 shadow-card flex flex-col">
               <div className="font-display text-lg text-foreground">{loc.name}</div>
               <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                 <li className="flex gap-3">
@@ -66,9 +67,21 @@ function LocationsPage() {
                 </li>
                 <li className="flex gap-3">
                   <Phone className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                  <a href={`tel:${loc.phone.replace(/\s/g, "")}`} className="hover:text-primary transition">{loc.phone}</a>
+                  <span className="flex flex-col">
+                    <a href={`tel:${loc.phone.replace(/\s/g, "")}`} className="hover:text-primary transition">{loc.phone}</a>
+                    <a href={`tel:${loc.altPhone.replace(/\s/g, "")}`} className="hover:text-primary transition">{loc.altPhone}</a>
+                  </span>
                 </li>
               </ul>
+              <div className="mt-5 overflow-hidden rounded-xl border border-border">
+                <iframe
+                  src={loc.mapEmbed}
+                  title={`Map — ${loc.name}`}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-56 border-0"
+                />
+              </div>
             </div>
           ))}
         </div>
