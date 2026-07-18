@@ -81,11 +81,11 @@ function AboutPage() {
           </div>
 
           <aside className="lg:col-span-5 space-y-6">
-            <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative">
+            <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative bg-gradient-soft">
               <img
                 src={drTomarReal.url}
                 alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-contain object-center"
               />
             </div>
             <div className="rounded-3xl bg-gradient-brand text-primary-foreground p-8 shadow-elegant">
