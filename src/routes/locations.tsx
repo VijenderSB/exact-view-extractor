@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-locations.jpg";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { MapPin, Clock, Phone, Video, Plane, Building2 } from "lucide-react";
 import { FAQBlock } from "@/components/site/ContentBlocks";
@@ -41,7 +42,7 @@ const locations = [
 
 function LocationsPage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["locations"]} testimonialsTitle={"Patients across our locations"}>
       <PageHero
         eyebrow="Clinics & Locations"
         title="Meet Dr. Tomar in Delhi NCR — or online."

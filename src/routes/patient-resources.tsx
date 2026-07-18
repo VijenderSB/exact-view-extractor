@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-patient-resources.jpg";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { FileText, HelpCircle, HeartPulse, Download, ClipboardCheck, Users } from "lucide-react";
 import { FAQBlock } from "@/components/site/ContentBlocks";
@@ -29,7 +30,7 @@ const resources = [
 
 function ResourcesPage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["resources"]} testimonialsTitle={"Patients on our resources"}>
       <PageHero
         eyebrow="Patient Resources"
         title="Everything you need — from your first question to your full recovery."

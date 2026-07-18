@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-specializations.jpg";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQBlock } from "@/components/site/ContentBlocks";
 import {
@@ -179,7 +180,7 @@ const groups: Group[] = [
 
 function SpecializationsPage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["specializations"]} testimonialsTitle={"Patient stories across specialties"}>
       <PageHero
         eyebrow="Specializations"
         title="Full-spectrum orthopaedic care, anchored in robotic precision."

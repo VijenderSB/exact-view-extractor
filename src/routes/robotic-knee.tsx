@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-robotic-knee.jpg";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2, Target, Activity, Timer, ShieldCheck, Sparkles } from "lucide-react";
 import { FAQBlock, MythFactBlock, TimelineBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
@@ -37,7 +38,7 @@ const candidates = [
 
 function RoboticKneePage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["robotic-knee"]} testimonialsTitle={"Robotic Knee — patient stories"}>
       <PageHero
         eyebrow="Robotic Knee Replacement"
         title="A knee replacement designed around your anatomy — not the other way around."

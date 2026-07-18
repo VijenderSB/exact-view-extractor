@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-robotic-hip.jpg";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2, Target, Activity, Timer, ShieldCheck, Sparkles } from "lucide-react";
 import { FAQBlock, MythFactBlock, TimelineBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
@@ -37,7 +38,7 @@ const candidates = [
 
 function RoboticHipPage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["robotic-hip"]} testimonialsTitle={"Robotic Hip — patient stories"}>
       <PageHero
         eyebrow="Robotic Hip Replacement"
         title="A hip that feels like it belongs to you."
