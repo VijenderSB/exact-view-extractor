@@ -30,6 +30,7 @@ import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConditionsIndexRouteImport } from './routes/conditions.index'
+import { Route as ProceduresSlugRouteImport } from './routes/procedures.$slug'
 import { Route as ConditionsSlugRouteImport } from './routes/conditions.$slug'
 
 const TraumaRoute = TraumaRouteImport.update({
@@ -137,6 +138,11 @@ const ConditionsIndexRoute = ConditionsIndexRouteImport.update({
   path: '/conditions/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProceduresSlugRoute = ProceduresSlugRouteImport.update({
+  id: '/procedures/$slug',
+  path: '/procedures/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ConditionsSlugRoute = ConditionsSlugRouteImport.update({
   id: '/conditions/$slug',
   path: '/conditions/$slug',
@@ -165,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -189,6 +196,7 @@ export interface FileRoutesByTo {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions': typeof ConditionsIndexRoute
 }
 export interface FileRoutesById {
@@ -214,6 +222,7 @@ export interface FileRoutesById {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -240,6 +249,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -264,6 +274,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions'
   id:
     | '__root__'
@@ -288,6 +299,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions/'
   fileRoutesById: FileRoutesById
 }
@@ -313,6 +325,7 @@ export interface RootRouteChildren {
   TermsOfUseRoute: typeof TermsOfUseRoute
   TraumaRoute: typeof TraumaRoute
   ConditionsSlugRoute: typeof ConditionsSlugRoute
+  ProceduresSlugRoute: typeof ProceduresSlugRoute
   ConditionsIndexRoute: typeof ConditionsIndexRoute
 }
 
@@ -465,6 +478,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procedures/$slug': {
+      id: '/procedures/$slug'
+      path: '/procedures/$slug'
+      fullPath: '/procedures/$slug'
+      preLoaderRoute: typeof ProceduresSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/conditions/$slug': {
       id: '/conditions/$slug'
       path: '/conditions/$slug'
@@ -497,6 +517,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsOfUseRoute: TermsOfUseRoute,
   TraumaRoute: TraumaRoute,
   ConditionsSlugRoute: ConditionsSlugRoute,
+  ProceduresSlugRoute: ProceduresSlugRoute,
   ConditionsIndexRoute: ConditionsIndexRoute,
 }
 export const routeTree = rootRouteImport
