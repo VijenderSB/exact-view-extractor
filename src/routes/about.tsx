@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
-import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse } from "lucide-react";
+import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
 import { BookAppointmentDialog } from "@/components/site/BookAppointment";
+import { FAQBlock } from "@/components/site/ContentBlocks";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
