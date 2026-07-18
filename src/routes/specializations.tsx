@@ -186,9 +186,10 @@ function SpecializationsPage() {
 
       <section className="py-20">
         <div className="container-page space-y-16">
-          {groups.map(({ id, icon: Icon, title, intro, accent, items }) => {
+          {groups.map(({ id, icon: Icon, title, intro, accent, items, href }) => {
             const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
             const accentDot = accent === "primary" ? "text-primary" : "text-teal";
+            const accentText = accent === "primary" ? "text-primary" : "text-teal";
             return (
               <div key={title} id={id} className="scroll-mt-28">
 
@@ -196,8 +197,17 @@ function SpecializationsPage() {
                   <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accentBg} shrink-0`}>
                     <Icon className="h-6 w-6" />
                   </span>
-                  <div>
-                    <h2 className="font-display text-2xl md:text-3xl text-foreground">{title}</h2>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                      <h2 className="font-display text-2xl md:text-3xl text-foreground">{title}</h2>
+                      <Link
+                        to={href}
+                        className={`group inline-flex items-center gap-1.5 text-sm font-medium ${accentText} hover:opacity-80 transition`}
+                      >
+                        Explore {title.toLowerCase()}
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
                     {intro && <p className="mt-2 text-muted-foreground max-w-2xl leading-relaxed">{intro}</p>}
                   </div>
                 </div>
@@ -213,6 +223,16 @@ function SpecializationsPage() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-6">
+                  <Link
+                    to={href}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition"
+                  >
+                    View full {title} page
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             );
           })}
