@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock, type FAQItem } from "@/components/site/ContentBlocks";
 import type { ComponentType } from "react";
 
 interface SpecializationPageProps {
@@ -16,6 +17,8 @@ interface SpecializationPageProps {
   related?: { label: string; to: string }[];
   image?: string;
   imageAlt?: string;
+  faqs?: FAQItem[];
+  faqTitle?: string;
 }
 
 export function SpecializationPage({
