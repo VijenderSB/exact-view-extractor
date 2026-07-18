@@ -55,7 +55,7 @@ export const Route = createFileRoute("/robotic-surgery")({
         { q: "Can robotic surgery correct severe deformity?", a: "Yes. Robotic planning is particularly useful in severe bow-leg, knock-knee and complex hip deformity, where accurate alignment and soft-tissue balance are critical." },
         { q: "How is recovery different from conventional surgery?", a: "Most robotic replacement patients walk the same day, need fewer painkillers and go home in 2–4 days. Return to daily activities is typically faster and more predictable." },
       ]}
-      image={aboutBanner.url}
+      image={heroImg.url}
       testimonials={testimonialsByTopic["robotic-surgery"]}
     />
 
