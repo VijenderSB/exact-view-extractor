@@ -14,6 +14,8 @@ interface SpecializationPageProps {
   procedures: string[];
   relatedLabel?: string;
   related?: { label: string; to: string }[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export function SpecializationPage({
@@ -26,13 +28,15 @@ export function SpecializationPage({
   procedures,
   relatedLabel = "Explore related care",
   related = [],
+  image,
+  imageAlt,
 }: SpecializationPageProps) {
   const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
   const accentDot = accent === "primary" ? "text-primary" : "text-teal";
 
   return (
     <PageShell>
-      <PageHero eyebrow={eyebrow} title={title} description={description} />
+      <PageHero eyebrow={eyebrow} title={title} description={description} image={image} imageAlt={imageAlt} />
 
       <section className="py-20">
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.4fr]">
