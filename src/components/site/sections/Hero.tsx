@@ -41,10 +41,10 @@ export function Hero() {
         <div className="lg:col-span-5 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-elegant ring-1 ring-white/10">
             <img
-              src={heroImg}
-              alt="Dr. L. Tomar with a knee joint model and robotic surgical planning visualisation"
-              width={1600}
-              height={1408}
+              src={heroImg.url}
+              alt="Dr. L. Tomar with the VELYS robotic-assisted surgical system"
+              width={1448}
+              height={1086}
               className="w-full h-auto object-cover"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[oklch(0.22_0.10_285/0.55)] via-transparent to-transparent" />
