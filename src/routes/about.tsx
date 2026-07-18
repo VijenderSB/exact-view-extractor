@@ -50,8 +50,7 @@ function AboutPage() {
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."
         description="Vice Chairman & Unit Head, Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi. President-Elect, Delhi Orthopaedic Association 2025–26."
-        image={drTomarReal.url}
-        imageFit="contain"
+        image={aboutBanner.url}
       />
 
       <section className="py-20">
