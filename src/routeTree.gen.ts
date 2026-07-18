@@ -138,9 +138,9 @@ const ConditionsIndexRoute = ConditionsIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConditionsSlugRoute = ConditionsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ConditionsRoute,
+  id: '/conditions/$slug',
+  path: '/conditions/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -312,6 +312,7 @@ export interface RootRouteChildren {
   SportsInjuryRoute: typeof SportsInjuryRoute
   TermsOfUseRoute: typeof TermsOfUseRoute
   TraumaRoute: typeof TraumaRoute
+  ConditionsSlugRoute: typeof ConditionsSlugRoute
   ConditionsIndexRoute: typeof ConditionsIndexRoute
 }
 
@@ -466,10 +467,10 @@ declare module '@tanstack/react-router' {
     }
     '/conditions/$slug': {
       id: '/conditions/$slug'
-      path: '/$slug'
+      path: '/conditions/$slug'
       fullPath: '/conditions/$slug'
       preLoaderRoute: typeof ConditionsSlugRouteImport
-      parentRoute: typeof ConditionsRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -495,18 +496,9 @@ const rootRouteChildren: RootRouteChildren = {
   SportsInjuryRoute: SportsInjuryRoute,
   TermsOfUseRoute: TermsOfUseRoute,
   TraumaRoute: TraumaRoute,
+  ConditionsSlugRoute: ConditionsSlugRoute,
   ConditionsIndexRoute: ConditionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
