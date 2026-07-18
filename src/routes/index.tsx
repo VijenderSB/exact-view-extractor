@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Dr. L. Tomar — Robotic Knee & Hip Replacement Surgery, Delhi NCR" },
       { name: "description", content: "Advanced robotic knee and hip replacement surgery in Delhi NCR. Personalised evaluation, technology-assisted surgical planning and comprehensive recovery support with Dr. L. Tomar." },
-      { property: "og:title", content: "Dr. L. Tomar — Robotic Knee & Hip Replacement Surgery" },
-      { property: "og:description", content: "Personalised evaluation and robotic-assisted joint replacement care in Delhi NCR." },
+      { property: "og:title", content: "Dr. L. Tomar — Robotic Knee & Hip Replacement Surgery, Delhi NCR" },
+      { property: "og:description", content: "Advanced robotic knee and hip replacement surgery in Delhi NCR. Personalised evaluation, technology-assisted surgical planning and comprehensive recovery support with Dr. L. Tomar." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
