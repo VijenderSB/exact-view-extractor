@@ -256,6 +256,20 @@ function SpecializationsPage() {
           </Link>
         </div>
       </section>
+
+      <FAQBlock
+        eyebrow="About our specializations"
+        title="Frequently asked questions"
+        items={[
+          { q: "Which specialization applies to my problem?", a: "If you're unsure, start with the symptom or joint affected — knee, hip, shoulder, elbow. Our team can also guide you after reviewing your reports over WhatsApp or email." },
+          { q: "What is the difference between robotic and conventional joint replacement?", a: "Robotic surgery uses 3D pre-op planning and real-time guidance for sub-millimetre accuracy in implant placement and soft-tissue balance. Dr. Tomar performs the surgery in both approaches." },
+          { q: "Do all these procedures happen at one hospital?", a: "Most procedures are performed at Max Super Speciality Hospital and partner facilities. Your specific hospital is confirmed at consultation based on procedure and insurance." },
+          { q: "Is a second opinion welcome?", a: "Yes. Many patients come specifically for a second opinion before deciding on surgery. You'll get a clear, unhurried view of surgical and non-surgical options." },
+          { q: "How do I know if I need surgery or non-surgical treatment?", a: "Every plan begins with a detailed history, examination and imaging review. Surgery is recommended only when non-surgical care is unlikely to give a durable result." },
+          { q: "Are outstation and international patients supported?", a: "Yes. We coordinate video consultations, hospital stay, insurance, transfers and post-operative follow-up for outstation and international patients." },
+        ]}
+      />
     </PageShell>
+
   );
 }
