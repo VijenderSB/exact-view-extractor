@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-specializations.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import {
@@ -182,6 +183,7 @@ function SpecializationsPage() {
         eyebrow="Specializations"
         title="Full-spectrum orthopaedic care, anchored in robotic precision."
         description="From flagship robotic joint replacement to arthroscopy, sports injury reconstruction and complex trauma — a complete list of procedures and conditions Dr. Tomar treats."
+      image={bannerImg}
       />
 
       <section className="py-20">

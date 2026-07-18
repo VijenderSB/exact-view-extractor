@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-elbow.jpg";
 import { Dumbbell } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
 
@@ -38,6 +39,7 @@ export const Route = createFileRoute("/elbow")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    />
+    image={bannerImg}
+      />
   ),
 });

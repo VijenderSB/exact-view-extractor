@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-about.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
@@ -34,6 +35,7 @@ function AboutPage() {
         eyebrow="About"
         title="Precision surgery, guided by decades of experience."
         description="Dr. L. Tomar combines classical orthopaedic training with modern robotic technology to deliver joint replacement outcomes that patients trust — with a strong belief that the right surgery, at the right time, changes lives."
+      image={bannerImg}
       />
 
       <section className="py-20">
