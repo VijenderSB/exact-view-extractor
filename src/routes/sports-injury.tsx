@@ -45,7 +45,16 @@ export const Route = createFileRoute("/sports-injury")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    image={bannerImg}
+      faqs={[
+        { q: "Does every ACL tear need surgery?", a: "Reconstruction is recommended for active patients, athletes and anyone whose knee gives way during turning or sport. Sedentary patients with a stable knee can sometimes manage non-surgically." },
+        { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport typically takes 9–12 months and is based on strength, hop-test and agility criteria — not the calendar alone." },
+        { q: "Can a torn meniscus heal on its own?", a: "Small tears in the outer, well-vascularised zone can heal or settle with rehab. Larger or displaced tears often need arthroscopic repair — preserving the meniscus protects against future arthritis." },
+        { q: "What is arthroscopy?", a: "Arthroscopy is keyhole joint surgery performed through two or three small incisions using a miniature camera. It allows precise repair with less pain, less bleeding and faster recovery than open surgery." },
+        { q: "Which graft is best for ACL reconstruction?", a: "Common autograft choices are hamstring, quadriceps and bone-patellar-tendon-bone. The right graft depends on your sport, body type and pre-injury level — discussed in detail before surgery." },
+        { q: "Can I go back to the same sport?", a: "Most recreational athletes return to their sport at their previous level. Return in professional or contact sport requires a structured, criteria-based rehab programme." },
+      ]}
+      image={bannerImg}
       />
+
   ),
 });
