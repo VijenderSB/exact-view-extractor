@@ -74,7 +74,7 @@ function AboutPage() {
               to bring the latest orthopaedic technology and technique to Indian patients.
             </p>
             <p>
-              Approximately 20,000 surgeries — including 1,500+ hip and knee replacements and 2,000+ spine surgeries — testify
+              Approximately 30,000 surgeries — including 1,500+ hip and knee replacements and 2,000+ spine surgeries — testify
               to his experience. He has been honoured with the Global Healthcare Excellence Award (2013) for the Best Joint
               Replacement Surgeon in Delhi & NCR, and with Distinguished Service Awards from the Indian Medical Association.
             </p>
