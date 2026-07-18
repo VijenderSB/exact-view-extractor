@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2 } from "lucide-react";
+import { FAQBlock, MythFactBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+
 
 export const Route = createFileRoute("/shoulder-elbow")({
   head: () => ({
