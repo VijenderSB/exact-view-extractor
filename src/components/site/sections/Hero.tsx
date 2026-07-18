@@ -45,7 +45,7 @@ export function Hero() {
               alt="Dr. L. Tomar with the VELYS robotic-assisted surgical system"
               width={1448}
               height={1086}
-              className="w-full h-auto object-cover scale-y-[1.2]"
+              className="w-full h-auto object-cover scale-[1.2]"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[oklch(0.22_0.10_285/0.55)] via-transparent to-transparent" />
           </div>
