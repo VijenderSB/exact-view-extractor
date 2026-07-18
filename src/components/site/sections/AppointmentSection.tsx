@@ -22,9 +22,8 @@ export function AppointmentSection() {
               </span>
               <div>
                 <div className="font-medium text-foreground">Call the clinic</div>
-                <a href="tel:+911234567890" className="text-sm text-muted-foreground hover:text-primary transition">
-                  +91 12345 67890
-                </a>
+                <a href="tel:+919910000159" className="block text-sm text-muted-foreground hover:text-primary transition">+91 99100 00159</a>
+                <a href="tel:+919810131676" className="block text-sm text-muted-foreground hover:text-primary transition">+91 98101 31676</a>
               </div>
             </li>
             <li className="flex gap-3 items-start">
@@ -33,8 +32,8 @@ export function AppointmentSection() {
               </span>
               <div>
                 <div className="font-medium text-foreground">WhatsApp</div>
-                <a href="https://wa.me/911234567890" className="text-sm text-muted-foreground hover:text-primary transition">
-                  Chat with our team
+                <a href="https://api.whatsapp.com/send?phone=919810131676&text=Hello%20Doctor,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-primary transition">
+                  Chat with our team — +91 98101 31676
                 </a>
               </div>
             </li>
@@ -52,8 +51,8 @@ export function AppointmentSection() {
                 <MapPin className="h-4 w-4" />
               </span>
               <div>
-                <div className="font-medium text-foreground">Clinic</div>
-                <p className="text-sm text-muted-foreground">Delhi NCR, India</p>
+                <div className="font-medium text-foreground">Tomar Orthopaedics</div>
+                <p className="text-sm text-muted-foreground">90, New Rajdhani Enclave, Vikash Marg, Delhi – 110092</p>
               </div>
             </li>
           </ul>

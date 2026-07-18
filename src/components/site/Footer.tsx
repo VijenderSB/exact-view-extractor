@@ -42,10 +42,11 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest opacity-90">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm opacity-90">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +91 12345 67890</li>
-            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp Enquiry</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> care@drltomar.com</li>
-            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5" /> Delhi NCR — multiple consultation locations</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> <a href="tel:+919910000159" className="hover:text-teal">+91 99100 00159</a></li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> <a href="tel:+919810131676" className="hover:text-teal">+91 98101 31676</a></li>
+            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> <a href="https://api.whatsapp.com/send?phone=919810131676" target="_blank" rel="noreferrer" className="hover:text-teal">WhatsApp Enquiry</a></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <a href="mailto:ltomar@rediffmail.com" className="hover:text-teal">ltomar@rediffmail.com</a></li>
+            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5" /> 90, New Rajdhani Enclave, Vikash Marg, Delhi – 110092</li>
           </ul>
         </div>
       </div>
