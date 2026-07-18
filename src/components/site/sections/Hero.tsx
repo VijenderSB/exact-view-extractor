@@ -50,13 +50,13 @@ export function Hero() {
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[oklch(0.22_0.10_285/0.55)] via-transparent to-transparent" />
           </div>
 
-          {/* floating stat */}
-          <div className="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-background text-foreground p-4 pr-6 shadow-elegant">
-            <div className="flex items-center gap-3">
-              <div className="h-11 w-11 rounded-xl bg-gradient-brand" />
+          {/* floating badge */}
+          <div className="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-background text-foreground p-5 pr-8 shadow-elegant">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-gradient-brand shrink-0" />
               <div>
-                <div className="font-display text-2xl leading-none">30,000+</div>
-                <div className="text-xs text-muted-foreground mt-1">Surgeries performed</div>
+                <div className="font-display text-3xl leading-none">Dr L Tomar</div>
+                <div className="text-sm text-muted-foreground mt-1">Advanced Orthopaedic &amp; Joint Replacement Surgeon</div>
               </div>
             </div>
           </div>
