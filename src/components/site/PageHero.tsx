@@ -8,9 +8,10 @@ interface PageHeroProps {
   breadcrumb?: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
 }
 
-export function PageHero({ eyebrow, title, description, breadcrumb, image, imageAlt }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, breadcrumb, image, imageAlt, imageFit = "cover" }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-gradient-soft">
       <div className="absolute inset-0 opacity-40 pointer-events-none [background:radial-gradient(60%_60%_at_80%_0%,hsl(var(--teal)/0.18),transparent_60%),radial-gradient(50%_50%_at_0%_100%,hsl(var(--primary)/0.18),transparent_60%)]" />
