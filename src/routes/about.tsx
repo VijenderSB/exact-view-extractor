@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-about.jpg";
-import drTomarPortrait from "@/assets/dr-tomar-portrait.jpg";
+import drTomarReal from "@/assets/dr-tomar-real.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
@@ -50,7 +49,8 @@ function AboutPage() {
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."
         description="Vice Chairman & Unit Head, Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi. President-Elect, Delhi Orthopaedic Association 2025–26."
-        image={bannerImg}
+        image={drTomarReal.url}
+        imageFit="contain"
       />
 
       <section className="py-20">
@@ -81,11 +81,11 @@ function AboutPage() {
           </div>
 
           <aside className="lg:col-span-5 space-y-6">
-            <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative">
+            <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative bg-gradient-soft">
               <img
-                src={drTomarPortrait}
+                src={drTomarReal.url}
                 alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-contain object-center"
               />
             </div>
             <div className="rounded-3xl bg-gradient-brand text-primary-foreground p-8 shadow-elegant">
