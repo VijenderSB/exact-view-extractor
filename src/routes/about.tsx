@@ -46,7 +46,7 @@ const memberships = [
 
 function AboutPage() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["about"]} testimonialsTitle={"What patients say about Dr. Tomar"}>
+    <PageShell testimonials={testimonialsByTopic["about"]} testimonialsTitle={"What patients say about Dr. Tomar"}>
       <PageHero
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."

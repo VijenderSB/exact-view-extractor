@@ -28,7 +28,7 @@ export const Route = createFileRoute("/conditions/")({
 
 function ConditionsIndex() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["conditions"]} testimonialsTitle={"Patients on getting the right diagnosis"}>
+    <PageShell testimonials={testimonialsByTopic["conditions"]} testimonialsTitle={"Patients on getting the right diagnosis"}>
       <PageHero
         eyebrow="Conditions Treated"
         title="Understand your condition — then choose the right treatment."

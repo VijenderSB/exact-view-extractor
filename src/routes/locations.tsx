@@ -42,7 +42,7 @@ const locations = [
 
 function LocationsPage() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["locations"]} testimonialsTitle={"Patients across our locations"}>
+    <PageShell testimonials={testimonialsByTopic["locations"]} testimonialsTitle={"Patients across our locations"}>
       <PageHero
         eyebrow="Clinics & Locations"
         title="Meet Dr. Tomar in Delhi NCR — or online."
