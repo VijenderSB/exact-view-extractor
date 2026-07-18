@@ -74,7 +74,7 @@ function ProcedureDetail() {
         eyebrow={p.category}
         title={p.name}
         description={p.tagline}
-        image={p.banner}
+        image={heroImg.url}
         imageAlt={p.name}
       />
 
