@@ -28,6 +28,7 @@ type Group = {
 
 const groups: Group[] = [
   {
+    id: "core",
     icon: Bot,
     title: "Core Specializations",
     accent: "primary",
@@ -46,6 +47,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "knee",
     icon: Bone,
     title: "Knee Surgery",
     accent: "teal",
@@ -65,6 +67,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "hip",
     icon: CircleDot,
     title: "Hip Surgery",
     accent: "primary",
@@ -80,6 +83,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "shoulder",
     icon: Activity,
     title: "Shoulder Surgery",
     accent: "teal",
@@ -95,6 +99,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "elbow",
     icon: Dumbbell,
     title: "Elbow Surgery",
     accent: "primary",
@@ -107,6 +112,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "sports",
     icon: HeartPulse,
     title: "Sports Injury & Arthroscopy",
     accent: "teal",
@@ -123,6 +129,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "trauma",
     icon: ShieldPlus,
     title: "Trauma & Fracture Care",
     accent: "primary",
@@ -135,6 +142,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "conditions",
     icon: Stethoscope,
     title: "Orthopaedic Conditions Treated",
     accent: "teal",
