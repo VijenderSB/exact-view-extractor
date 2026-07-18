@@ -46,7 +46,16 @@ export const Route = createFileRoute("/knee")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    image={bannerImg}
+      faqs={[
+        { q: "Do I really need a knee replacement?", a: "Not always. Many patients improve with the right combination of weight optimisation, physiotherapy, medication and injections. Surgery is considered only when pain limits daily life and imaging supports it." },
+        { q: "How is robotic knee replacement different?", a: "Robotic systems assist with 3D pre-op planning, precise bone preparation and real-time soft-tissue balancing. Dr. Tomar performs the surgery; the robot does not act autonomously." },
+        { q: "Total or partial (uni) knee replacement — which is right for me?", a: "Partial replacement is offered when arthritis is limited to one compartment and ligaments are intact. Total replacement is preferred for widespread arthritis or deformity." },
+        { q: "How soon can I walk after knee surgery?", a: "Most patients begin assisted walking within 24 hours. Stairs, driving and outdoor walks progress over the first four to six weeks." },
+        { q: "How long does a modern knee implant last?", a: "In most patients today's implants are designed to last well over 15–20 years when placed accurately and cared for properly." },
+        { q: "Can I sit cross-legged or squat afterwards?", a: "High-flex implants and modern techniques allow deep bending for most patients, but this depends on your anatomy, muscle strength and pre-op flexibility." },
+      ]}
+      image={bannerImg}
       />
+
   ),
 });
