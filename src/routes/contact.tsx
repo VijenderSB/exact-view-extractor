@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-contact.jpg";
+import bannerImg from "@/assets/banner-contact-clinic.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
@@ -24,7 +24,7 @@ function ContactPage() {
         eyebrow="Contact"
         title="Let's talk about your joints."
         description="Whether you're exploring surgery, seeking a second opinion or coordinating an outstation visit, our team is here to help — in the language and pace that works for you."
-      image={bannerImg}
+      image={bannerImg.url}
       />
 
       <section className="py-20">
