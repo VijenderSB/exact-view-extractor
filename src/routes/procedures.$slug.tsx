@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, ArrowLeft, CheckCircle2, ShieldCheck, Sparkles, Activity, Clock } from "lucide-react";
+import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQBlock } from "@/components/site/ContentBlocks";
