@@ -55,8 +55,8 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <div className="h-11 w-11 rounded-xl bg-gradient-brand" />
               <div>
-                <div className="font-display text-2xl leading-none">5,000+</div>
-                <div className="text-xs text-muted-foreground mt-1">Joint replacement procedures</div>
+                <div className="font-display text-2xl leading-none">30,000+</div>
+                <div className="text-xs text-muted-foreground mt-1">Surgeries performed</div>
               </div>
             </div>
           </div>

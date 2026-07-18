@@ -12,9 +12,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Dr. L. Tomar — Robotic Joint Replacement Surgeon, Delhi NCR" },
-      { name: "description", content: "Meet Dr. L. Tomar — orthopaedic surgeon with 25+ years of experience in robotic knee and hip replacement, delivering personalised, technology-assisted care in Delhi NCR." },
+      { name: "description", content: "Meet Dr. L. Tomar — orthopaedic surgeon with 32+ years of experience and 30,000+ surgeries in robotic knee and hip replacement across Delhi NCR." },
       { property: "og:title", content: "About Dr. L. Tomar — Robotic Joint Replacement Surgeon" },
-      { property: "og:description", content: "25+ years of surgical experience, 5,000+ joint replacements, robotic-assisted precision." },
+      { property: "og:description", content: "32+ years of surgical experience, 30,000+ surgeries, robotic-assisted precision." },
     ],
   }),
   component: AboutPage,
@@ -24,8 +24,8 @@ const milestones = [
   { icon: GraduationCap, label: "MCh Orthopaedics — Dundee, UK", desc: "MCh Orthopaedics from University of Dundee, Scotland — a globally recognised centre for orthopaedic research." },
   { icon: GraduationCap, label: "MS Orthopaedics — LLRM, Meerut", desc: "MS in Orthopaedics from LLRM Medical College, Meerut University." },
   { icon: Microscope, label: "Fellowships FICS & FASIF (AO)", desc: "Fellow, International College of Surgeons (USA) and AO Alumni Association (Switzerland) — internal fixation & complex trauma." },
-  { icon: Stethoscope, label: "24+ Years of Practice", desc: "Vice Chairman & Unit Head, Orthopaedics & Joint Replacement — Max Super Speciality Hospital, Patparganj, Delhi." },
-  { icon: Users, label: "20,000+ Surgeries", desc: "Including 1,500+ hip & knee replacements and 2,000+ spine surgeries over a two-decade career." },
+  { icon: Stethoscope, label: "32+ Years of Practice", desc: "Vice Chairman & Unit Head, Orthopaedics & Joint Replacement — Max Super Speciality Hospital, Patparganj, Delhi." },
+  { icon: Users, label: "30,000+ Surgeries", desc: "Including 1,500+ hip & knee replacements and 2,000+ spine surgeries across a three-decade career." },
   { icon: Award, label: "Awards & Leadership", desc: "President-Elect, Delhi Orthopaedic Association 2025–26. Global Healthcare Excellence Award 2013 — Best Joint Replacement Surgeon, Delhi & NCR." },
 ];
 
@@ -74,7 +74,7 @@ function AboutPage() {
               to bring the latest orthopaedic technology and technique to Indian patients.
             </p>
             <p>
-              Approximately 20,000 surgeries — including 1,500+ hip and knee replacements and 2,000+ spine surgeries — testify
+              Approximately 30,000 surgeries — including 1,500+ hip and knee replacements and 2,000+ spine surgeries — testify
               to his experience. He has been honoured with the Global Healthcare Excellence Award (2013) for the Best Joint
               Replacement Surgeon in Delhi & NCR, and with Distinguished Service Awards from the Indian Medical Association.
             </p>
@@ -92,11 +92,11 @@ function AboutPage() {
               <p className="text-xs uppercase tracking-[0.24em] opacity-80">At a glance</p>
               <div className="mt-6 grid grid-cols-2 gap-6">
                 <div>
-                  <div className="font-display text-4xl">24+</div>
+                  <div className="font-display text-4xl">32+</div>
                   <div className="text-sm opacity-90 mt-1">Years experience</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl">20,000+</div>
+                  <div className="font-display text-4xl">30,000+</div>
                   <div className="text-sm opacity-90 mt-1">Surgeries performed</div>
                 </div>
                 <div>

@@ -1,9 +1,9 @@
 const items = [
-  { k: "25+", v: "Years of experience" },
-  { k: "5,000+", v: "Knee & hip procedures" },
-  { k: "MS · MCh", v: "Orthopaedic qualifications" },
-  { k: "Delhi NCR", v: "Multi-hospital affiliation" },
-  { k: "4 States", v: "Patients served across region" },
+  { k: "32+", v: "Years of experience" },
+  { k: "30,000+", v: "Surgeries performed" },
+  { k: "1,500+", v: "Hip & knee replacements" },
+  { k: "MS · MCh", v: "Dundee, Scotland (UK)" },
+  { k: "Delhi NCR", v: "Max Patparganj & partners" },
 ];
 
 export function TrustStrip() {

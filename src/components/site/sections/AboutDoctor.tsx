@@ -33,11 +33,11 @@ export function AboutDoctor() {
         <div className="lg:col-span-7">
           <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold">About the surgeon</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl lg:text-5xl leading-tight">
-            24+ years dedicated to <span className="text-gradient-brand">joint replacement excellence</span>
+            32+ years dedicated to <span className="text-gradient-brand">joint replacement excellence</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
             Dr. L. Tomar is Vice Chairman & Unit Head of the Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi.
-            President-Elect of the Delhi Orthopaedic Association (2025–26), with more than 20,000 surgeries — including 1,500+ hip and knee replacements — his practice is anchored in computer-navigated, minimally invasive joint replacement.
+            President-Elect of the Delhi Orthopaedic Association (2025–26), with more than 30,000 surgeries — including 1,500+ hip and knee replacements — his practice is anchored in computer-navigated, minimally invasive joint replacement.
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
