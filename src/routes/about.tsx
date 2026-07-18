@@ -49,7 +49,7 @@ function AboutPage() {
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."
         description="Vice Chairman & Unit Head, Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi. President-Elect, Delhi Orthopaedic Association 2025–26."
-        image={bannerImg}
+        image={drTomarReal.url}
       />
 
       <section className="py-20">
@@ -82,7 +82,7 @@ function AboutPage() {
           <aside className="lg:col-span-5 space-y-6">
             <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative">
               <img
-                src={drTomarPortrait}
+                src={drTomarReal.url}
                 alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
                 className="absolute inset-0 h-full w-full object-cover"
               />
