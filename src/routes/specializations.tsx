@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-specializations.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock } from "@/components/site/ContentBlocks";
 import {
   Bot, Bone, Activity, CircleDot, Dumbbell, Stethoscope, HeartPulse, ShieldPlus, CheckCircle2, ArrowRight,
 } from "lucide-react";
