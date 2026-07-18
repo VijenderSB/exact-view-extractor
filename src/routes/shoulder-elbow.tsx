@@ -4,6 +4,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2 } from "lucide-react";
 import { FAQBlock, MythFactBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 
 export const Route = createFileRoute("/shoulder-elbow")({
