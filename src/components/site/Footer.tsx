@@ -1,9 +1,10 @@
+import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="mt-24 bg-gradient-hero text-primary-foreground">
-      <div className="container-page py-16 grid gap-12 md:grid-cols-4">
+      <div className="container-page py-16 grid gap-12 md:grid-cols-5">
         <div className="md:col-span-2 max-w-md">
           <div className="flex items-center gap-3">
             <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-background/10 backdrop-blur font-display text-lg">LT</span>
@@ -20,11 +21,21 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest opacity-90">Care</h4>
           <ul className="mt-4 space-y-2 text-sm opacity-80">
-            <li>Robotic Knee Replacement</li>
-            <li>Robotic Hip Replacement</li>
-            <li>Complex & Revision Surgery</li>
-            <li>Arthroscopy & Sports Injuries</li>
-            <li>Shoulder & Elbow</li>
+            <li><Link to="/robotic-knee" className="hover:text-teal transition-colors">Robotic Knee Replacement</Link></li>
+            <li><Link to="/robotic-hip" className="hover:text-teal transition-colors">Robotic Hip Replacement</Link></li>
+            <li><Link to="/specializations" hash="core" className="hover:text-teal transition-colors">Complex & Revision Surgery</Link></li>
+            <li><Link to="/arthroscopy" className="hover:text-teal transition-colors">Arthroscopy & Sports Injuries</Link></li>
+            <li><Link to="/shoulder-elbow" className="hover:text-teal transition-colors">Shoulder & Elbow</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-widest opacity-90">Resources</h4>
+          <ul className="mt-4 space-y-2 text-sm opacity-80">
+            <li><Link to="/patient-resources" className="hover:text-teal transition-colors">Patient Resources</Link></li>
+            <li><Link to="/locations" className="hover:text-teal transition-colors">Locations</Link></li>
+            <li><Link to="/specializations" className="hover:text-teal transition-colors">All Specializations</Link></li>
+            <li><Link to="/contact" className="hover:text-teal transition-colors">Contact Us</Link></li>
           </ul>
         </div>
 
