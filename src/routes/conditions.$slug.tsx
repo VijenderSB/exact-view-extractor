@@ -143,7 +143,21 @@ function ConditionDetail() {
           </div>
         </div>
       </section>
+
+      <FAQBlock
+        eyebrow="About this condition"
+        title={`${c.name} — frequently asked questions`}
+        items={[
+          { q: `How is ${c.name.toLowerCase()} diagnosed?`, a: `Diagnosis begins with a detailed history and clinical examination, supported by imaging — typically X-ray first, and MRI or CT when soft tissues or complex bone anatomy need to be assessed.` },
+          { q: `Can ${c.name.toLowerCase()} be treated without surgery?`, a: `Most cases start with non-surgical care — activity modification, physiotherapy, medication and, where appropriate, injections. Surgery is offered when non-surgical treatment cannot give a lasting result.` },
+          { q: "How soon should I see a specialist?", a: "See a specialist if pain lasts more than a few weeks, disturbs sleep, causes swelling or instability, or limits your walking, stairs, work or sport." },
+          { q: "Will this condition get worse if left untreated?", a: "Many joint conditions progress with time, weight and activity. Early evaluation gives you the widest range of treatment options — including joint-preserving ones." },
+          { q: "What lifestyle changes help?", a: "Weight optimisation, joint-friendly exercise (walking, swimming, cycling), strength training and avoiding high-impact overload are the foundations of long-term joint health." },
+          { q: "Do you offer a second opinion?", a: "Yes. Many patients come specifically for a second opinion before deciding on treatment. You'll receive a clear, unhurried view of surgical and non-surgical options." },
+        ]}
+      />
     </PageShell>
+
   );
 }
 
