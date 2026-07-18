@@ -99,6 +99,21 @@ function ContactPage() {
           </p>
         </div>
       </section>
+
+      <FAQBlock
+        eyebrow="Before you visit"
+        title="Contacting the clinic — common questions"
+        items={[
+          { q: "How do I book an appointment?", a: "You can call the clinic, message us on WhatsApp, email your reports, or use the appointment form on this page. Our team confirms your slot within working hours." },
+          { q: "What are the clinic timings?", a: "Consultations run Monday to Saturday, 10:00 AM to 6:00 PM. Sunday visits are by prior appointment for outstation and emergency cases." },
+          { q: "Where is the clinic located?", a: "Tomar Orthopaedics — 90, New Rajdhani Enclave, Vikash Marg, Delhi 110092. The map on this page opens directions in Google Maps." },
+          { q: "Can I get an opinion before travelling?", a: "Yes. Outstation and international patients can share reports over WhatsApp or email and request a video consultation before planning travel." },
+          { q: "What should I bring for my first visit?", a: "Bring recent X-rays, MRI or CT scans, blood reports and a list of current medication. If you don't have these, we'll guide you at the visit." },
+          { q: "Do you accept insurance and cashless treatment?", a: "Most major health insurance policies are accepted for admissions at partner hospitals. Our team helps with pre-authorisation and paperwork." },
+          { q: "Is Dr. Tomar available for a second opinion only?", a: "Absolutely. Many patients come specifically for a second opinion. You'll receive a clear, unhurried view — surgical or non-surgical." },
+        ]}
+      />
     </PageShell>
+
   );
 }
