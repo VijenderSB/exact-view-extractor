@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-about.jpg";
+import drTomarPortrait from "@/assets/dr-tomar-portrait.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
@@ -20,12 +21,26 @@ export const Route = createFileRoute("/about")({
 });
 
 const milestones = [
-  { icon: GraduationCap, label: "MBBS, MS (Orthopaedics)", desc: "Trained at premier Indian institutions with international fellowships." },
-  { icon: Stethoscope, label: "25+ Years of Practice", desc: "Focused on joint reconstruction, arthroplasty and sports injuries." },
-  { icon: Microscope, label: "Robotic Surgery Certified", desc: "Trained on leading robotic platforms for knee and hip replacement." },
-  { icon: Users, label: "5,000+ Procedures", desc: "Long-standing outcomes with patients from across India and abroad." },
-  { icon: Award, label: "Recognitions", desc: "Speaker at national and international orthopaedic conferences." },
-  { icon: HeartPulse, label: "Patient-First Ethic", desc: "Surgery only when truly needed — conservative care always considered first." },
+  { icon: GraduationCap, label: "MCh Orthopaedics — Dundee, UK", desc: "MCh Orthopaedics from University of Dundee, Scotland — a globally recognised centre for orthopaedic research." },
+  { icon: GraduationCap, label: "MS Orthopaedics — LLRM, Meerut", desc: "MS in Orthopaedics from LLRM Medical College, Meerut University." },
+  { icon: Microscope, label: "Fellowships FICS & FASIF (AO)", desc: "Fellow, International College of Surgeons (USA) and AO Alumni Association (Switzerland) — internal fixation & complex trauma." },
+  { icon: Stethoscope, label: "24+ Years of Practice", desc: "Vice Chairman & Unit Head, Orthopaedics & Joint Replacement — Max Super Speciality Hospital, Patparganj, Delhi." },
+  { icon: Users, label: "20,000+ Surgeries", desc: "Including 1,500+ hip & knee replacements and 2,000+ spine surgeries over a two-decade career." },
+  { icon: Award, label: "Awards & Leadership", desc: "President-Elect, Delhi Orthopaedic Association 2025–26. Global Healthcare Excellence Award 2013 — Best Joint Replacement Surgeon, Delhi & NCR." },
+];
+
+const memberships = [
+  "American Academy of Orthopaedic Surgeons",
+  "AOSpine Asia Pacific",
+  "AO Alumni Association, Switzerland",
+  "International College of Surgeons, USA",
+  "Indian Arthroplasty Association (EC – North Zone)",
+  "Alumni Association, Dundee University, UK",
+  "Asia Pacific Arthroplasty Society",
+  "Indian Hip and Knee Surgeons Society",
+  "Spine Surgeons of India",
+  "Life Member — Indian Orthopaedic Association",
+  "Delhi Medical Council — Reg. No. 14493",
 ];
 
 function AboutPage() {
@@ -33,9 +48,9 @@ function AboutPage() {
     <PageShell>
       <PageHero
         eyebrow="About"
-        title="Precision surgery, guided by decades of experience."
-        description="Dr. L. Tomar combines classical orthopaedic training with modern robotic technology to deliver joint replacement outcomes that patients trust — with a strong belief that the right surgery, at the right time, changes lives."
-      image={bannerImg}
+        title="Dr. L. Tomar — precision surgery, guided by decades of experience."
+        description="Vice Chairman & Unit Head, Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi. President-Elect, Delhi Orthopaedic Association 2025–26."
+        image={bannerImg}
       />
 
       <section className="py-20">
@@ -43,40 +58,54 @@ function AboutPage() {
           <div className="lg:col-span-7 space-y-6 text-muted-foreground leading-relaxed">
             <h2 className="font-display text-3xl md:text-4xl text-foreground">A surgeon dedicated to restoring mobility</h2>
             <p>
-              With over two decades of experience in orthopaedic surgery, Dr. L. Tomar has helped thousands of patients regain movement,
-              confidence and independence. His approach is unhurried, evidence-based and centred on the patient — because every joint,
-              every anatomy and every lifestyle is different.
+              Dr. L. Tomar has more than 24 years of experience in orthopaedics and is one of Delhi NCR's most established
+              joint replacement surgeons. His practice is built around computer-navigated, minimally invasive surgery (MIS) —
+              the latest advancement in joint replacement, making hip and knee replacement highly safe, reliable, precise
+              and long-lasting for patients.
             </p>
             <p>
-              A strong proponent of robotic-assisted arthroplasty, Dr. Tomar uses computer-guided planning and intra-operative
-              precision to align implants to each patient's unique bone anatomy. The result: smaller incisions, more natural knee kinematics,
-              faster rehabilitation and long-lasting outcomes.
+              Trained at LLRM Medical College, Meerut and later awarded an MCh in Orthopaedics from the University of Dundee, Scotland (UK),
+              he further sharpened his skills at Ninewells Hospital and Perth Royal Infirmary — expanding into primary and revision
+              joint replacement and minimally invasive computer-assisted navigation surgery.
             </p>
             <p>
-              Beyond the operating theatre, he is known for spending time educating patients and families, discussing every non-surgical option
-              first, and stepping in with surgery only when it is genuinely the best path forward.
+              He holds fellowships FICS (International College of Surgeons, USA) and FASIF (AO Switzerland). He has collaborations
+              with leading surgeons in the USA, Switzerland, Germany, UK and Australia, and frequently visits these institutions
+              to bring the latest orthopaedic technology and technique to Indian patients.
+            </p>
+            <p>
+              Approximately 20,000 surgeries — including 1,500+ hip and knee replacements and 2,000+ spine surgeries — testify
+              to his experience. He has been honoured with the Global Healthcare Excellence Award (2013) for the Best Joint
+              Replacement Surgeon in Delhi & NCR, and with Distinguished Service Awards from the Indian Medical Association.
             </p>
           </div>
 
-          <aside className="lg:col-span-5">
+          <aside className="lg:col-span-5 space-y-6">
+            <div className="rounded-3xl overflow-hidden shadow-elegant aspect-[4/5] relative">
+              <img
+                src={drTomarPortrait}
+                alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
             <div className="rounded-3xl bg-gradient-brand text-primary-foreground p-8 shadow-elegant">
               <p className="text-xs uppercase tracking-[0.24em] opacity-80">At a glance</p>
               <div className="mt-6 grid grid-cols-2 gap-6">
                 <div>
-                  <div className="font-display text-4xl">25+</div>
+                  <div className="font-display text-4xl">24+</div>
                   <div className="text-sm opacity-90 mt-1">Years experience</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl">5,000+</div>
-                  <div className="text-sm opacity-90 mt-1">Joint replacements</div>
+                  <div className="font-display text-4xl">20,000+</div>
+                  <div className="text-sm opacity-90 mt-1">Surgeries performed</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl">98%</div>
-                  <div className="text-sm opacity-90 mt-1">Patient satisfaction</div>
+                  <div className="font-display text-4xl">1,500+</div>
+                  <div className="text-sm opacity-90 mt-1">Hip & knee replacements</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl">30+</div>
-                  <div className="text-sm opacity-90 mt-1">Cities served</div>
+                  <div className="font-display text-4xl">2,000+</div>
+                  <div className="text-sm opacity-90 mt-1">Spine surgeries</div>
                 </div>
               </div>
               <BookAppointmentDialog>
@@ -86,6 +115,36 @@ function AboutPage() {
               </BookAppointmentDialog>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-soft border-y border-border">
+        <div className="container-page">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.24em] text-primary font-medium">Credentials</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl text-foreground">Training, expertise and recognition</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {milestones.map(({ icon: Icon, label, desc }) => (
+              <div key={label} className="rounded-2xl bg-card border border-border p-6 shadow-card">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div className="mt-4 font-display text-lg text-foreground">{label}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 rounded-3xl bg-card border border-border p-8 shadow-card">
+            <p className="text-xs uppercase tracking-[0.24em] text-primary font-medium">Professional memberships</p>
+            <h3 className="mt-2 font-display text-2xl text-foreground">Member of leading orthopaedic institutions</h3>
+            <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 text-sm text-muted-foreground">
+              {memberships.map((m) => (
+                <li key={m} className="flex gap-2 items-start"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-teal shrink-0" />{m}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
