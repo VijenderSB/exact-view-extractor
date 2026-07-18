@@ -7,9 +7,9 @@ const nav = [
   { label: "About", href: "/about" as const },
   { label: "Robotic Knee", href: "/robotic-knee" as const },
   { label: "Robotic Hip", href: "/robotic-hip" as const },
+  { label: "Specializations", href: "/specializations" as const },
   { label: "Arthroscopy", href: "/arthroscopy" as const },
   { label: "Shoulder & Elbow", href: "/shoulder-elbow" as const },
-  { label: "Patient Resources", href: "/patient-resources" as const },
   { label: "Locations", href: "/locations" as const },
   { label: "Contact", href: "/contact" as const },
 ];

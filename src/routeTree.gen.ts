@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpecializationsRouteImport } from './routes/specializations'
 import { Route as ShoulderElbowRouteImport } from './routes/shoulder-elbow'
 import { Route as RoboticKneeRouteImport } from './routes/robotic-knee'
 import { Route as RoboticHipRouteImport } from './routes/robotic-hip'
@@ -19,6 +20,11 @@ import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SpecializationsRoute = SpecializationsRouteImport.update({
+  id: '/specializations',
+  path: '/specializations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShoulderElbowRoute = ShoulderElbowRouteImport.update({
   id: '/shoulder-elbow',
   path: '/shoulder-elbow',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/shoulder-elbow': typeof ShoulderElbowRoute
+  '/specializations': typeof SpecializationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByTo {
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/shoulder-elbow': typeof ShoulderElbowRoute
+  '/specializations': typeof SpecializationsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +106,7 @@ export interface FileRoutesById {
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/shoulder-elbow': typeof ShoulderElbowRoute
+  '/specializations': typeof SpecializationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +120,7 @@ export interface FileRouteTypes {
     | '/robotic-hip'
     | '/robotic-knee'
     | '/shoulder-elbow'
+    | '/specializations'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +132,7 @@ export interface FileRouteTypes {
     | '/robotic-hip'
     | '/robotic-knee'
     | '/shoulder-elbow'
+    | '/specializations'
   id:
     | '__root__'
     | '/'
@@ -133,6 +144,7 @@ export interface FileRouteTypes {
     | '/robotic-hip'
     | '/robotic-knee'
     | '/shoulder-elbow'
+    | '/specializations'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,10 +157,18 @@ export interface RootRouteChildren {
   RoboticHipRoute: typeof RoboticHipRoute
   RoboticKneeRoute: typeof RoboticKneeRoute
   ShoulderElbowRoute: typeof ShoulderElbowRoute
+  SpecializationsRoute: typeof SpecializationsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/specializations': {
+      id: '/specializations'
+      path: '/specializations'
+      fullPath: '/specializations'
+      preLoaderRoute: typeof SpecializationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shoulder-elbow': {
       id: '/shoulder-elbow'
       path: '/shoulder-elbow'
@@ -225,17 +245,8 @@ const rootRouteChildren: RootRouteChildren = {
   RoboticHipRoute: RoboticHipRoute,
   RoboticKneeRoute: RoboticKneeRoute,
   ShoulderElbowRoute: ShoulderElbowRoute,
+  SpecializationsRoute: SpecializationsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
