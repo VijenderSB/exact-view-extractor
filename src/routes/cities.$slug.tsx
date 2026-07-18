@@ -122,7 +122,7 @@ function CityDetail() {
                 <h3 className="font-display text-lg text-foreground">How to reach us from {city.name}</h3>
               </div>
               <ul className="mt-4 space-y-3">
-                {city.travelOptions.map((t) => (
+                {city.travelOptions.map((t: string) => (
                   <li key={t} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
                     <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
                     <span>{t}</span>

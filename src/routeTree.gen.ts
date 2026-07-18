@@ -35,6 +35,7 @@ import { Route as ConditionsIndexRouteImport } from './routes/conditions.index'
 import { Route as CitiesIndexRouteImport } from './routes/cities.index'
 import { Route as ProceduresSlugRouteImport } from './routes/procedures.$slug'
 import { Route as ConditionsSlugRouteImport } from './routes/conditions.$slug'
+import { Route as CitiesSlugRouteImport } from './routes/cities.$slug'
 
 const TraumaRoute = TraumaRouteImport.update({
   id: '/trauma',
@@ -166,6 +167,11 @@ const ConditionsSlugRoute = ConditionsSlugRouteImport.update({
   path: '/conditions/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CitiesSlugRoute = CitiesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CitiesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -190,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
   '/cities/': typeof CitiesIndexRoute
@@ -217,6 +224,7 @@ export interface FileRoutesByTo {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
   '/cities': typeof CitiesIndexRoute
@@ -246,6 +254,7 @@ export interface FileRoutesById {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
   '/cities/': typeof CitiesIndexRoute
@@ -276,6 +285,7 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
     | '/cities/'
@@ -303,6 +313,7 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
     | '/cities'
@@ -331,6 +342,7 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
     | '/cities/'
@@ -548,14 +560,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities/$slug': {
+      id: '/cities/$slug'
+      path: '/$slug'
+      fullPath: '/cities/$slug'
+      preLoaderRoute: typeof CitiesSlugRouteImport
+      parentRoute: typeof CitiesRoute
+    }
   }
 }
 
 interface CitiesRouteChildren {
+  CitiesSlugRoute: typeof CitiesSlugRoute
   CitiesIndexRoute: typeof CitiesIndexRoute
 }
 
 const CitiesRouteChildren: CitiesRouteChildren = {
+  CitiesSlugRoute: CitiesSlugRoute,
   CitiesIndexRoute: CitiesIndexRoute,
 }
 
