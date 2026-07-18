@@ -18,6 +18,7 @@ import { Route as ShoulderRouteImport } from './routes/shoulder'
 import { Route as RoboticSurgeryRouteImport } from './routes/robotic-surgery'
 import { Route as RoboticKneeRouteImport } from './routes/robotic-knee'
 import { Route as RoboticHipRouteImport } from './routes/robotic-hip'
+import { Route as ProceduresRouteImport } from './routes/procedures'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PatientResourcesRouteImport } from './routes/patient-resources'
 import { Route as LocationsRouteImport } from './routes/locations'
@@ -30,6 +31,7 @@ import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConditionsIndexRouteImport } from './routes/conditions.index'
+import { Route as ProceduresSlugRouteImport } from './routes/procedures.$slug'
 import { Route as ConditionsSlugRouteImport } from './routes/conditions.$slug'
 
 const TraumaRoute = TraumaRouteImport.update({
@@ -75,6 +77,11 @@ const RoboticKneeRoute = RoboticKneeRouteImport.update({
 const RoboticHipRoute = RoboticHipRouteImport.update({
   id: '/robotic-hip',
   path: '/robotic-hip',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProceduresRoute = ProceduresRouteImport.update({
+  id: '/procedures',
+  path: '/procedures',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -137,6 +144,11 @@ const ConditionsIndexRoute = ConditionsIndexRouteImport.update({
   path: '/conditions/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProceduresSlugRoute = ProceduresSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProceduresRoute,
+} as any)
 const ConditionsSlugRoute = ConditionsSlugRouteImport.update({
   id: '/conditions/$slug',
   path: '/conditions/$slug',
@@ -155,6 +167,7 @@ export interface FileRoutesByFullPath {
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/procedures': typeof ProceduresRouteWithChildren
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -165,6 +178,7 @@ export interface FileRoutesByFullPath {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -179,6 +193,7 @@ export interface FileRoutesByTo {
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/procedures': typeof ProceduresRouteWithChildren
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -189,6 +204,7 @@ export interface FileRoutesByTo {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions': typeof ConditionsIndexRoute
 }
 export interface FileRoutesById {
@@ -204,6 +220,7 @@ export interface FileRoutesById {
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/procedures': typeof ProceduresRouteWithChildren
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -214,6 +231,7 @@ export interface FileRoutesById {
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -230,6 +248,7 @@ export interface FileRouteTypes {
     | '/locations'
     | '/patient-resources'
     | '/privacy-policy'
+    | '/procedures'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -240,6 +259,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -254,6 +274,7 @@ export interface FileRouteTypes {
     | '/locations'
     | '/patient-resources'
     | '/privacy-policy'
+    | '/procedures'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -264,6 +285,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions'
   id:
     | '__root__'
@@ -278,6 +300,7 @@ export interface FileRouteTypes {
     | '/locations'
     | '/patient-resources'
     | '/privacy-policy'
+    | '/procedures'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -288,6 +311,7 @@ export interface FileRouteTypes {
     | '/terms-of-use'
     | '/trauma'
     | '/conditions/$slug'
+    | '/procedures/$slug'
     | '/conditions/'
   fileRoutesById: FileRoutesById
 }
@@ -303,6 +327,7 @@ export interface RootRouteChildren {
   LocationsRoute: typeof LocationsRoute
   PatientResourcesRoute: typeof PatientResourcesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ProceduresRoute: typeof ProceduresRouteWithChildren
   RoboticHipRoute: typeof RoboticHipRoute
   RoboticKneeRoute: typeof RoboticKneeRoute
   RoboticSurgeryRoute: typeof RoboticSurgeryRoute
@@ -379,6 +404,13 @@ declare module '@tanstack/react-router' {
       path: '/robotic-hip'
       fullPath: '/robotic-hip'
       preLoaderRoute: typeof RoboticHipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedures': {
+      id: '/procedures'
+      path: '/procedures'
+      fullPath: '/procedures'
+      preLoaderRoute: typeof ProceduresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -465,6 +497,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procedures/$slug': {
+      id: '/procedures/$slug'
+      path: '/$slug'
+      fullPath: '/procedures/$slug'
+      preLoaderRoute: typeof ProceduresSlugRouteImport
+      parentRoute: typeof ProceduresRoute
+    }
     '/conditions/$slug': {
       id: '/conditions/$slug'
       path: '/conditions/$slug'
@@ -474,6 +513,18 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface ProceduresRouteChildren {
+  ProceduresSlugRoute: typeof ProceduresSlugRoute
+}
+
+const ProceduresRouteChildren: ProceduresRouteChildren = {
+  ProceduresSlugRoute: ProceduresSlugRoute,
+}
+
+const ProceduresRouteWithChildren = ProceduresRoute._addFileChildren(
+  ProceduresRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -487,6 +538,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocationsRoute: LocationsRoute,
   PatientResourcesRoute: PatientResourcesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ProceduresRoute: ProceduresRouteWithChildren,
   RoboticHipRoute: RoboticHipRoute,
   RoboticKneeRoute: RoboticKneeRoute,
   RoboticSurgeryRoute: RoboticSurgeryRoute,
