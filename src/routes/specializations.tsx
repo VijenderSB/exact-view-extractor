@@ -18,6 +18,7 @@ export const Route = createFileRoute("/specializations")({
 });
 
 type Group = {
+  id: string;
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   intro?: string;
@@ -27,6 +28,7 @@ type Group = {
 
 const groups: Group[] = [
   {
+    id: "core",
     icon: Bot,
     title: "Core Specializations",
     accent: "primary",
@@ -45,6 +47,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "knee",
     icon: Bone,
     title: "Knee Surgery",
     accent: "teal",
@@ -64,6 +67,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "hip",
     icon: CircleDot,
     title: "Hip Surgery",
     accent: "primary",
@@ -79,6 +83,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "shoulder",
     icon: Activity,
     title: "Shoulder Surgery",
     accent: "teal",
@@ -94,6 +99,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "elbow",
     icon: Dumbbell,
     title: "Elbow Surgery",
     accent: "primary",
@@ -106,6 +112,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "sports",
     icon: HeartPulse,
     title: "Sports Injury & Arthroscopy",
     accent: "teal",
@@ -122,6 +129,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "trauma",
     icon: ShieldPlus,
     title: "Trauma & Fracture Care",
     accent: "primary",
@@ -134,6 +142,7 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "conditions",
     icon: Stethoscope,
     title: "Orthopaedic Conditions Treated",
     accent: "teal",
@@ -168,11 +177,12 @@ function SpecializationsPage() {
 
       <section className="py-20">
         <div className="container-page space-y-16">
-          {groups.map(({ icon: Icon, title, intro, accent, items }) => {
+          {groups.map(({ id, icon: Icon, title, intro, accent, items }) => {
             const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
             const accentDot = accent === "primary" ? "text-primary" : "text-teal";
             return (
-              <div key={title}>
+              <div key={title} id={id} className="scroll-mt-28">
+
                 <div className="flex items-start gap-4">
                   <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accentBg} shrink-0`}>
                     <Icon className="h-6 w-6" />
