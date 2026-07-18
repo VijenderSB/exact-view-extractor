@@ -65,6 +65,7 @@ const nav: NavItem[] = [
       { label: "Upper & Lower Limb Trauma", href: "/procedures/limb-trauma" },
     ],
   },
+  { label: "Cities We Serve", href: "/cities" },
   { label: "Contact Us", href: "/contact" },
 ];
 

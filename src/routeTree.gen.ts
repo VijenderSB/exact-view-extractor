@@ -27,12 +27,15 @@ import { Route as HipRouteImport } from './routes/hip'
 import { Route as ElbowRouteImport } from './routes/elbow'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CitiesRouteImport } from './routes/cities'
 import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConditionsIndexRouteImport } from './routes/conditions.index'
+import { Route as CitiesIndexRouteImport } from './routes/cities.index'
 import { Route as ProceduresSlugRouteImport } from './routes/procedures.$slug'
 import { Route as ConditionsSlugRouteImport } from './routes/conditions.$slug'
+import { Route as CitiesSlugRouteImport } from './routes/cities.$slug'
 
 const TraumaRoute = TraumaRouteImport.update({
   id: '/trauma',
@@ -124,6 +127,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CitiesRoute = CitiesRouteImport.update({
+  id: '/cities',
+  path: '/cities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArthroscopyRoute = ArthroscopyRouteImport.update({
   id: '/arthroscopy',
   path: '/arthroscopy',
@@ -144,6 +152,11 @@ const ConditionsIndexRoute = ConditionsIndexRouteImport.update({
   path: '/conditions/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CitiesIndexRoute = CitiesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CitiesRoute,
+} as any)
 const ProceduresSlugRoute = ProceduresSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -154,11 +167,17 @@ const ConditionsSlugRoute = ConditionsSlugRouteImport.update({
   path: '/conditions/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CitiesSlugRoute = CitiesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CitiesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/arthroscopy': typeof ArthroscopyRoute
+  '/cities': typeof CitiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/elbow': typeof ElbowRoute
@@ -177,8 +196,10 @@ export interface FileRoutesByFullPath {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
+  '/cities/': typeof CitiesIndexRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -203,8 +224,10 @@ export interface FileRoutesByTo {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
+  '/cities': typeof CitiesIndexRoute
   '/conditions': typeof ConditionsIndexRoute
 }
 export interface FileRoutesById {
@@ -212,6 +235,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/arthroscopy': typeof ArthroscopyRoute
+  '/cities': typeof CitiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/elbow': typeof ElbowRoute
@@ -230,8 +254,10 @@ export interface FileRoutesById {
   '/sports-injury': typeof SportsInjuryRoute
   '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
+  '/cities/$slug': typeof CitiesSlugRoute
   '/conditions/$slug': typeof ConditionsSlugRoute
   '/procedures/$slug': typeof ProceduresSlugRoute
+  '/cities/': typeof CitiesIndexRoute
   '/conditions/': typeof ConditionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -240,6 +266,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/arthroscopy'
+    | '/cities'
     | '/contact'
     | '/disclaimer'
     | '/elbow'
@@ -258,8 +285,10 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
+    | '/cities/'
     | '/conditions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -284,14 +313,17 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
+    | '/cities'
     | '/conditions'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/arthroscopy'
+    | '/cities'
     | '/contact'
     | '/disclaimer'
     | '/elbow'
@@ -310,8 +342,10 @@ export interface FileRouteTypes {
     | '/sports-injury'
     | '/terms-of-use'
     | '/trauma'
+    | '/cities/$slug'
     | '/conditions/$slug'
     | '/procedures/$slug'
+    | '/cities/'
     | '/conditions/'
   fileRoutesById: FileRoutesById
 }
@@ -319,6 +353,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ArthroscopyRoute: typeof ArthroscopyRoute
+  CitiesRoute: typeof CitiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   ElbowRoute: typeof ElbowRoute
@@ -469,6 +504,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities': {
+      id: '/cities'
+      path: '/cities'
+      fullPath: '/cities'
+      preLoaderRoute: typeof CitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/arthroscopy': {
       id: '/arthroscopy'
       path: '/arthroscopy'
@@ -497,6 +539,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities/': {
+      id: '/cities/'
+      path: '/'
+      fullPath: '/cities/'
+      preLoaderRoute: typeof CitiesIndexRouteImport
+      parentRoute: typeof CitiesRoute
+    }
     '/procedures/$slug': {
       id: '/procedures/$slug'
       path: '/$slug'
@@ -511,8 +560,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities/$slug': {
+      id: '/cities/$slug'
+      path: '/$slug'
+      fullPath: '/cities/$slug'
+      preLoaderRoute: typeof CitiesSlugRouteImport
+      parentRoute: typeof CitiesRoute
+    }
   }
 }
+
+interface CitiesRouteChildren {
+  CitiesSlugRoute: typeof CitiesSlugRoute
+  CitiesIndexRoute: typeof CitiesIndexRoute
+}
+
+const CitiesRouteChildren: CitiesRouteChildren = {
+  CitiesSlugRoute: CitiesSlugRoute,
+  CitiesIndexRoute: CitiesIndexRoute,
+}
+
+const CitiesRouteWithChildren =
+  CitiesRoute._addFileChildren(CitiesRouteChildren)
 
 interface ProceduresRouteChildren {
   ProceduresSlugRoute: typeof ProceduresSlugRoute
@@ -530,6 +599,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ArthroscopyRoute: ArthroscopyRoute,
+  CitiesRoute: CitiesRouteWithChildren,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   ElbowRoute: ElbowRoute,
