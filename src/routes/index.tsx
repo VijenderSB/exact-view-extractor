@@ -42,6 +42,7 @@ function Home() {
         <Journey />
         <Outstation />
         <FAQ />
+        <Testimonials />
         <AppointmentSection />
         <FinalCTA />
       </main>
