@@ -100,7 +100,12 @@ export function SpecializationPage({
         </section>
       )}
 
+      {faqs && faqs.length > 0 && (
+        <FAQBlock title={faqTitle ?? `${eyebrow} — frequently asked questions`} items={faqs} />
+      )}
+
       <section className="py-16">
+
         <div className="container-page text-center max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl text-foreground">Discuss your case with Dr. Tomar</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
