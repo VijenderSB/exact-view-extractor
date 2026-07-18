@@ -1,6 +1,6 @@
 import { GraduationCap, Award, Building2, HeartPulse, ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import drTomarPortrait from "@/assets/dr-tomar-portrait.jpg";
+import drTomarPortrait from "@/assets/dr-tomar-real.png.asset.json";
 
 const points = [
   { icon: GraduationCap, title: "Qualifications", text: "MBBS, MS (Ortho), MCh Orthopaedics — University of Dundee, Scotland, UK. Fellowships FICS (USA) & FASIF (AO Switzerland)." },
@@ -16,9 +16,9 @@ export function AboutDoctor() {
         <div className="lg:col-span-5">
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-elegant">
             <img
-              src={drTomarPortrait}
+              src={drTomarPortrait.url}
               alt="Dr. L. Tomar — Senior Orthopaedic & Joint Replacement Surgeon, Delhi"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-contain object-center bg-gradient-soft"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.18_0.06_285/0.85)] via-[oklch(0.22_0.08_285/0.35)] to-transparent" />
