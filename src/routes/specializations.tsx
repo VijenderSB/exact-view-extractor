@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import {
-  Bot, Bone, Activity, CircleDot, Dumbbell, Stethoscope, HeartPulse, ShieldPlus, CheckCircle2,
+  Bot, Bone, Activity, CircleDot, Dumbbell, Stethoscope, HeartPulse, ShieldPlus, CheckCircle2, ArrowRight,
 } from "lucide-react";
 
 export const Route = createFileRoute("/specializations")({
