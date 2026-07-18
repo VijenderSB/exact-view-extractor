@@ -24,8 +24,8 @@ const milestones = [
   { icon: GraduationCap, label: "MCh Orthopaedics — Dundee, UK", desc: "MCh Orthopaedics from University of Dundee, Scotland — a globally recognised centre for orthopaedic research." },
   { icon: GraduationCap, label: "MS Orthopaedics — LLRM, Meerut", desc: "MS in Orthopaedics from LLRM Medical College, Meerut University." },
   { icon: Microscope, label: "Fellowships FICS & FASIF (AO)", desc: "Fellow, International College of Surgeons (USA) and AO Alumni Association (Switzerland) — internal fixation & complex trauma." },
-  { icon: Stethoscope, label: "24+ Years of Practice", desc: "Vice Chairman & Unit Head, Orthopaedics & Joint Replacement — Max Super Speciality Hospital, Patparganj, Delhi." },
-  { icon: Users, label: "20,000+ Surgeries", desc: "Including 1,500+ hip & knee replacements and 2,000+ spine surgeries over a two-decade career." },
+  { icon: Stethoscope, label: "32+ Years of Practice", desc: "Vice Chairman & Unit Head, Orthopaedics & Joint Replacement — Max Super Speciality Hospital, Patparganj, Delhi." },
+  { icon: Users, label: "30,000+ Surgeries", desc: "Including 1,500+ hip & knee replacements and 2,000+ spine surgeries across a three-decade career." },
   { icon: Award, label: "Awards & Leadership", desc: "President-Elect, Delhi Orthopaedic Association 2025–26. Global Healthcare Excellence Award 2013 — Best Joint Replacement Surgeon, Delhi & NCR." },
 ];
 
