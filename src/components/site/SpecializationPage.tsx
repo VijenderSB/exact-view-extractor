@@ -3,6 +3,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQBlock, type FAQItem } from "@/components/site/ContentBlocks";
+import type { Testimonial } from "@/components/site/sections/Testimonials";
 import type { ComponentType } from "react";
 
 interface SpecializationPageProps {
@@ -19,6 +20,7 @@ interface SpecializationPageProps {
   imageAlt?: string;
   faqs?: FAQItem[];
   faqTitle?: string;
+  testimonials?: Testimonial[];
 }
 
 export function SpecializationPage({
@@ -35,13 +37,15 @@ export function SpecializationPage({
   imageAlt,
   faqs,
   faqTitle,
+  testimonials,
 }: SpecializationPageProps) {
   const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
   const accentDot = accent === "primary" ? "text-primary" : "text-teal";
 
   return (
-    <PageShell>
+    <PageShell testimonials={testimonials} testimonialsTitle={`${eyebrow} — patient stories`}>
       <PageHero eyebrow={eyebrow} title={title} description={description} image={image} imageAlt={imageAlt} />
+
 
       <section className="py-20">
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.4fr]">
