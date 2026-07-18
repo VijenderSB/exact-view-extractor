@@ -30,13 +30,12 @@ const conditions = [
 
 function ShoulderPage() {
   return (
-    <PageShell>
+    <PageShell testimonials={testimonialsByTopic["shoulder-elbow"]} testimonialsTitle="Shoulder & Elbow — patient stories">
       <PageHero
         eyebrow="Shoulder & Elbow"
         title="Freedom to reach, lift, throw and rest — without pain."
         description="From common overuse injuries to complex reconstructive surgery, Dr. Tomar's shoulder and elbow practice covers the full spectrum — always weighted toward the least invasive option that will work."
       image={bannerImg}
-      testimonials={testimonialsByTopic["shoulder-elbow"]}
       />
 
       <section className="py-20">
