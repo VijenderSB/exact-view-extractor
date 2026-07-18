@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock, type FAQItem } from "@/components/site/ContentBlocks";
 import type { ComponentType } from "react";
 
 interface SpecializationPageProps {
@@ -16,6 +17,8 @@ interface SpecializationPageProps {
   related?: { label: string; to: string }[];
   image?: string;
   imageAlt?: string;
+  faqs?: FAQItem[];
+  faqTitle?: string;
 }
 
 export function SpecializationPage({
@@ -30,6 +33,8 @@ export function SpecializationPage({
   related = [],
   image,
   imageAlt,
+  faqs,
+  faqTitle,
 }: SpecializationPageProps) {
   const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
   const accentDot = accent === "primary" ? "text-primary" : "text-teal";
@@ -95,7 +100,12 @@ export function SpecializationPage({
         </section>
       )}
 
+      {faqs && faqs.length > 0 && (
+        <FAQBlock title={faqTitle ?? `${eyebrow} — frequently asked questions`} items={faqs} />
+      )}
+
       <section className="py-16">
+
         <div className="container-page text-center max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl text-foreground">Discuss your case with Dr. Tomar</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">

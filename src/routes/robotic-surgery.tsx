@@ -46,7 +46,16 @@ export const Route = createFileRoute("/robotic-surgery")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
+      faqs={[
+        { q: "Does the robot perform the surgery?", a: "No. Dr. Tomar performs every step. The robot assists with 3D planning, real-time measurement and precise bone preparation — it never acts autonomously." },
+        { q: "Is robotic joint replacement safer?", a: "Robotic systems reduce human variability in bone cuts and implant positioning, both linked to long-term implant survival and function. Overall safety also depends on surgeon expertise, anaesthesia and rehabilitation." },
+        { q: "Is robotic surgery worth the higher cost?", a: "For most patients the added accuracy, better soft-tissue balance and quicker rehabilitation justify the cost. We discuss expected benefit and insurance coverage clearly during consultation." },
+        { q: "Am I too old (or too young) for robotic replacement?", a: "There is no strict age cut-off. Suitability depends on your joint condition, medical fitness and functional goals — not just age." },
+        { q: "Can robotic surgery correct severe deformity?", a: "Yes. Robotic planning is particularly useful in severe bow-leg, knock-knee and complex hip deformity, where accurate alignment and soft-tissue balance are critical." },
+        { q: "How is recovery different from conventional surgery?", a: "Most robotic replacement patients walk the same day, need fewer painkillers and go home in 2–4 days. Return to daily activities is typically faster and more predictable." },
+      ]}
       image={aboutBanner.url}
     />
+
   ),
 });

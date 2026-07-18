@@ -39,7 +39,15 @@ export const Route = createFileRoute("/elbow")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    image={bannerImg}
+      faqs={[
+        { q: "Does tennis elbow need surgery?", a: "Rarely. Most cases settle with activity modification, counter-force bracing, eccentric physiotherapy and — if needed — PRP injections. Surgery is reserved for pain that persists beyond six to twelve months of good non-surgical care." },
+        { q: "How long does tennis elbow take to recover?", a: "With structured non-surgical treatment, most patients improve over six to twelve weeks. Grip-heavy activities are reintroduced gradually to prevent recurrence." },
+        { q: "What is cubital tunnel syndrome?", a: "It's compression of the ulnar nerve at the elbow, causing tingling in the ring and little fingers, weak grip and elbow discomfort. Mild cases improve with bracing; persistent cases benefit from surgical release." },
+        { q: "Can elbow arthritis be treated without replacement?", a: "Yes — arthroscopic debridement, loose body removal and injections help early arthritis. Replacement is considered only for advanced disease with significant pain and functional limitation." },
+        { q: "Is elbow ligament reconstruction only for athletes?", a: "It's most common in throwing athletes, but any patient with instability from a torn medial or lateral collateral ligament can benefit from reconstruction to restore reliable elbow function." },
+      ]}
+      image={bannerImg}
       />
+
   ),
 });

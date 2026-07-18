@@ -3,6 +3,7 @@ import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
+import { FAQBlock } from "@/components/site/ContentBlocks";
 import { conditions } from "@/data/conditions";
 
 export const Route = createFileRoute("/conditions/")({
@@ -83,6 +84,20 @@ function ConditionsIndex() {
           </Link>
         </div>
       </section>
+
+      <FAQBlock
+        eyebrow="Understanding your condition"
+        title="Frequently asked questions"
+        items={[
+          { q: "How do I know which condition I have?", a: "Diagnosis begins with your history, a focused physical examination and — where needed — X-rays, MRI or blood tests. Symptoms alone can point in several directions, so imaging often clarifies the picture." },
+          { q: "Do all these conditions need surgery?", a: "No. Many respond very well to non-surgical care — physiotherapy, medication, activity modification, bracing and injections. Surgery is reserved for cases where non-surgical treatment is unlikely to give a durable result." },
+          { q: "When should I see an orthopaedic specialist?", a: "Book a consultation if pain lasts more than a few weeks, disturbs sleep, causes swelling or instability, or limits your walking, stairs, work or sport." },
+          { q: "Can arthritis be reversed?", a: "Arthritis cannot be reversed, but its progression can be slowed and symptoms controlled with the right combination of weight optimisation, therapy, medication and — when needed — joint-preserving or replacement surgery." },
+          { q: "What imaging will I need?", a: "Most joint problems need an X-ray as a first step. MRI is added for cartilage, ligament or soft-tissue issues. CT is used for complex fractures and pre-operative planning." },
+          { q: "Are second opinions common in orthopaedics?", a: "Very common, and encouraged. A second opinion helps you understand your options — surgical and non-surgical — before committing to a treatment plan." },
+        ]}
+      />
     </PageShell>
+
   );
 }
