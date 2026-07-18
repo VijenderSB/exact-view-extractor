@@ -23,6 +23,7 @@ type Group = {
   title: string;
   intro?: string;
   accent: "primary" | "teal";
+  href: "/robotic-surgery" | "/knee" | "/hip" | "/shoulder" | "/elbow" | "/sports-injury" | "/trauma" | "/conditions";
   items: string[];
 };
 
