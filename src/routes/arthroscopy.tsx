@@ -4,6 +4,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2 } from "lucide-react";
 import { FAQBlock, MythFactBlock, TimelineBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 
 export const Route = createFileRoute("/arthroscopy")({
@@ -29,7 +30,7 @@ const procedures = [
 
 function ArthroscopyPage() {
   return (
-    <PageShell>
+    <PageShell testimonials={testimonialsByTopic["arthroscopy"]} testimonialsTitle="Arthroscopy — patient stories">
       <PageHero
         eyebrow="Arthroscopy & Sports Injury"
         title="Keyhole surgery for the active life."

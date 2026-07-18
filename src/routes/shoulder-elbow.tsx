@@ -4,6 +4,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2 } from "lucide-react";
 import { FAQBlock, MythFactBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 
 export const Route = createFileRoute("/shoulder-elbow")({
@@ -29,7 +30,7 @@ const conditions = [
 
 function ShoulderPage() {
   return (
-    <PageShell>
+    <PageShell testimonials={testimonialsByTopic["shoulder-elbow"]} testimonialsTitle="Shoulder & Elbow — patient stories">
       <PageHero
         eyebrow="Shoulder & Elbow"
         title="Freedom to reach, lift, throw and rest — without pain."

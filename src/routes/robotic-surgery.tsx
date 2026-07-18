@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import aboutBanner from "@/assets/about-banner-robotic.png.asset.json";
 import { Bot } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/robotic-surgery")({
   head: () => ({
@@ -55,6 +56,7 @@ export const Route = createFileRoute("/robotic-surgery")({
         { q: "How is recovery different from conventional surgery?", a: "Most robotic replacement patients walk the same day, need fewer painkillers and go home in 2–4 days. Return to daily activities is typically faster and more predictable." },
       ]}
       image={aboutBanner.url}
+      testimonials={testimonialsByTopic["robotic-surgery"]}
     />
 
   ),

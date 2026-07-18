@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-hip.jpg";
 import { CircleDot } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/hip")({
   head: () => ({
@@ -52,6 +53,7 @@ export const Route = createFileRoute("/hip")({
         { q: "Can hip fracture surgery in the elderly be avoided?", a: "Hip fractures are best fixed early — within 24–48 hours — to reduce medical complications and restore mobility. Non-surgical care carries far higher risk." },
       ]}
       image={bannerImg}
+      testimonials={testimonialsByTopic["hip"]}
       />
 
   ),

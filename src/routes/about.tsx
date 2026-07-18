@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import drTomarReal from "@/assets/dr-tomar-real.png.asset.json";
 import aboutBanner from "@/assets/about-banner-robotic.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
+import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
 import { BookAppointmentDialog } from "@/components/site/BookAppointment";
@@ -45,7 +46,7 @@ const memberships = [
 
 function AboutPage() {
   return (
-    <PageShell>
+    <PageShellNone testimonials={testimonialsByTopic["about"]} testimonialsTitle={"What patients say about Dr. Tomar"}>
       <PageHero
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."
