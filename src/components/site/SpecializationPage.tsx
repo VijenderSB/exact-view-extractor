@@ -33,6 +33,8 @@ export function SpecializationPage({
   related = [],
   image,
   imageAlt,
+  faqs,
+  faqTitle,
 }: SpecializationPageProps) {
   const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
   const accentDot = accent === "primary" ? "text-primary" : "text-teal";
