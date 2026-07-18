@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import {
-  Bot, Bone, Activity, CircleDot, Dumbbell, Stethoscope, HeartPulse, ShieldPlus, CheckCircle2,
+  Bot, Bone, Activity, CircleDot, Dumbbell, Stethoscope, HeartPulse, ShieldPlus, CheckCircle2, ArrowRight,
 } from "lucide-react";
 
 export const Route = createFileRoute("/specializations")({
@@ -23,6 +23,7 @@ type Group = {
   title: string;
   intro?: string;
   accent: "primary" | "teal";
+  href: "/robotic-surgery" | "/knee" | "/hip" | "/shoulder" | "/elbow" | "/sports-injury" | "/trauma" | "/conditions";
   items: string[];
 };
 
@@ -32,6 +33,7 @@ const groups: Group[] = [
     icon: Bot,
     title: "Core Specializations",
     accent: "primary",
+    href: "/robotic-surgery",
     intro: "Flagship robotic and computer-assisted joint replacement — Dr. Tomar's most requested procedures.",
     items: [
       "Robotic Knee Replacement Surgery",
@@ -51,6 +53,7 @@ const groups: Group[] = [
     icon: Bone,
     title: "Knee Surgery",
     accent: "teal",
+    href: "/knee",
     items: [
       "Total Knee Replacement",
       "Partial Knee Replacement (Unicompartmental)",
@@ -71,6 +74,7 @@ const groups: Group[] = [
     icon: CircleDot,
     title: "Hip Surgery",
     accent: "primary",
+    href: "/hip",
     items: [
       "Robotic Hip Replacement",
       "Total Hip Replacement",
@@ -87,6 +91,7 @@ const groups: Group[] = [
     icon: Activity,
     title: "Shoulder Surgery",
     accent: "teal",
+    href: "/shoulder",
     items: [
       "Shoulder Replacement Surgery",
       "Reverse Shoulder Replacement",
@@ -103,6 +108,7 @@ const groups: Group[] = [
     icon: Dumbbell,
     title: "Elbow Surgery",
     accent: "primary",
+    href: "/elbow",
     items: [
       "Elbow Replacement Surgery",
       "Elbow Arthroscopy",
@@ -116,6 +122,7 @@ const groups: Group[] = [
     icon: HeartPulse,
     title: "Sports Injury & Arthroscopy",
     accent: "teal",
+    href: "/sports-injury",
     items: [
       "ACL Reconstruction",
       "PCL Reconstruction",
@@ -133,6 +140,7 @@ const groups: Group[] = [
     icon: ShieldPlus,
     title: "Trauma & Fracture Care",
     accent: "primary",
+    href: "/trauma",
     items: [
       "Complex Fracture Management",
       "Pelvic & Acetabular Fracture Surgery",
@@ -146,6 +154,7 @@ const groups: Group[] = [
     icon: Stethoscope,
     title: "Orthopaedic Conditions Treated",
     accent: "teal",
+    href: "/conditions",
     items: [
       "Knee Arthritis",
       "Hip Arthritis",
@@ -177,9 +186,10 @@ function SpecializationsPage() {
 
       <section className="py-20">
         <div className="container-page space-y-16">
-          {groups.map(({ id, icon: Icon, title, intro, accent, items }) => {
+          {groups.map(({ id, icon: Icon, title, intro, accent, items, href }) => {
             const accentBg = accent === "primary" ? "bg-primary/10 text-primary" : "bg-teal/10 text-teal";
             const accentDot = accent === "primary" ? "text-primary" : "text-teal";
+            const accentText = accent === "primary" ? "text-primary" : "text-teal";
             return (
               <div key={title} id={id} className="scroll-mt-28">
 
@@ -187,8 +197,17 @@ function SpecializationsPage() {
                   <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accentBg} shrink-0`}>
                     <Icon className="h-6 w-6" />
                   </span>
-                  <div>
-                    <h2 className="font-display text-2xl md:text-3xl text-foreground">{title}</h2>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                      <h2 className="font-display text-2xl md:text-3xl text-foreground">{title}</h2>
+                      <Link
+                        to={href}
+                        className={`group inline-flex items-center gap-1.5 text-sm font-medium ${accentText} hover:opacity-80 transition`}
+                      >
+                        Explore {title.toLowerCase()}
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
                     {intro && <p className="mt-2 text-muted-foreground max-w-2xl leading-relaxed">{intro}</p>}
                   </div>
                 </div>
@@ -204,6 +223,16 @@ function SpecializationsPage() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-6">
+                  <Link
+                    to={href}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition"
+                  >
+                    View full {title} page
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             );
           })}
