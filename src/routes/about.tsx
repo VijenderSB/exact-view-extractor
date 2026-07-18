@@ -108,6 +108,61 @@ function AboutPage() {
       </section>
 
       <section className="py-20">
+        <div className="container-page">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.24em] text-primary font-medium">Philosophy of care</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl text-foreground">How we practise, and why it matters to you</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Surgery is the last option, not the first.", desc: "Physiotherapy, weight management, medication and injections come first. Surgery is offered only when it will genuinely change your life." },
+              { title: "One surgeon, from first visit to full recovery.", desc: "You'll see Dr. Tomar personally at every consultation — before, during and long after surgery. Continuity is not delegated." },
+              { title: "Honest conversations, in your language.", desc: "Consultations happen in English, Hindi and Punjabi. Complex ideas are explained with diagrams, models and plain words." },
+              { title: "Technology used with judgement.", desc: "Robotic assistance is used because it improves outcomes — not because it's fashionable. Where classical technique is better, we use it." },
+              { title: "Family involved, not sidelined.", desc: "Spouses, adult children and caregivers are part of the discussion. Recovery works best when the household is prepared." },
+              { title: "Long-term follow-up as standard.", desc: "Every joint replacement patient stays under review for years — because a great implant deserves great long-term care." },
+            ].map((v) => (
+              <div key={v.title} className="rounded-2xl bg-card border border-border p-6 shadow-card">
+                <div className="font-display text-lg text-foreground">{v.title}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-soft border-y border-border">
+        <div className="container-page grid gap-10 lg:grid-cols-3">
+          {[
+            { name: "Rajeev S., 62", city: "Delhi", quote: "I had put off my knee surgery for years out of fear. Dr. Tomar explained every step in Hindi, and I was walking up my own stairs in two weeks." },
+            { name: "Meera K., 55", city: "Chandigarh (outstation)", quote: "I travelled from Chandigarh for the robotic hip. The clinic coordinated my stay, physiotherapy and follow-ups over video. It felt effortless." },
+            { name: "Vikram P., 48", city: "Gurgaon", quote: "ACL reconstruction after a football injury. Nine months later, I was back on the pitch — stronger, and with a proper rehab plan I actually stuck to." },
+          ].map((t) => (
+            <blockquote key={t.name} className="rounded-2xl bg-card border border-border p-6 shadow-card">
+              <Quote className="h-6 w-6 text-primary/70" />
+              <p className="mt-4 text-foreground leading-relaxed">"{t.quote}"</p>
+              <footer className="mt-6 text-sm text-muted-foreground">
+                <div className="font-medium text-foreground">{t.name}</div>
+                <div>{t.city}</div>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      <FAQBlock
+        title="About Dr. Tomar — what patients often ask first"
+        items={[
+          { q: "Does Dr. Tomar personally perform every surgery?", a: "Yes. Every joint replacement, arthroscopy and revision surgery is performed personally by Dr. Tomar — not delegated to a trainee or assistant." },
+          { q: "Which hospitals does he operate at?", a: "He operates at partner hospitals across Delhi NCR — including facilities in South Delhi, Gurgaon and Noida — chosen for surgical infrastructure, ICU quality and physiotherapy support." },
+          { q: "Do you take second-opinion consultations?", a: "Absolutely. A significant part of our practice is helping patients avoid unnecessary surgery, or refining a plan they've been given elsewhere." },
+          { q: "Can I consult over video?", a: "Yes — video consultations are available for review visits, second opinions and follow-ups. First consultations for surgery are preferably in person." },
+          { q: "Do you support outstation and international patients?", a: "Yes. The team coordinates travel, accommodation, hospital admission, cashless approvals and remote follow-ups for patients from across India and abroad." },
+        ]}
+      />
+
+      <section className="py-20">
+
         <div className="container-page grid gap-10 lg:grid-cols-2 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-primary font-medium">Explore</p>
