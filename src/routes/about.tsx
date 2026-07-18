@@ -12,9 +12,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Dr. L. Tomar — Robotic Joint Replacement Surgeon, Delhi NCR" },
-      { name: "description", content: "Meet Dr. L. Tomar — orthopaedic surgeon with 25+ years of experience in robotic knee and hip replacement, delivering personalised, technology-assisted care in Delhi NCR." },
+      { name: "description", content: "Meet Dr. L. Tomar — orthopaedic surgeon with 32+ years of experience and 30,000+ surgeries in robotic knee and hip replacement across Delhi NCR." },
       { property: "og:title", content: "About Dr. L. Tomar — Robotic Joint Replacement Surgeon" },
-      { property: "og:description", content: "25+ years of surgical experience, 5,000+ joint replacements, robotic-assisted precision." },
+      { property: "og:description", content: "32+ years of surgical experience, 30,000+ surgeries, robotic-assisted precision." },
     ],
   }),
   component: AboutPage,
