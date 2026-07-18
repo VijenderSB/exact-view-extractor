@@ -43,7 +43,16 @@ export const Route = createFileRoute("/hip")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    image={bannerImg}
+      faqs={[
+        { q: "Why does hip arthritis cause groin pain?", a: "The hip joint sits deep in the groin, so wear at the joint typically presents as groin or thigh pain rather than pain on the outside of the hip." },
+        { q: "What's the advantage of robotic hip replacement?", a: "Robotic planning helps position the cup accurately, preserve bone and equalise leg length — three factors linked to long-term function and implant survival." },
+        { q: "I'm young and have AVN — do I need a replacement?", a: "Not always. Early-stage AVN can be treated with core decompression, bone grafting or realignment. Replacement is reserved for advanced collapse." },
+        { q: "How long is the hospital stay after hip surgery?", a: "Most patients stay 2–3 nights. Walking with a support begins the day of surgery, and stair climbing typically starts within the first week." },
+        { q: "Will one leg be longer than the other?", a: "Restoring equal leg length is a key goal. Robotic and computer-assisted planning make this measurable and reliable." },
+        { q: "Can hip fracture surgery in the elderly be avoided?", a: "Hip fractures are best fixed early — within 24–48 hours — to reduce medical complications and restore mobility. Non-surgical care carries far higher risk." },
+      ]}
+      image={bannerImg}
       />
+
   ),
 });
