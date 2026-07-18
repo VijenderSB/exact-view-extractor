@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-robotic-hip.jpg";
+import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { testimonialsByTopic } from "@/data/testimonials";
 import { PageHero } from "@/components/site/PageHero";

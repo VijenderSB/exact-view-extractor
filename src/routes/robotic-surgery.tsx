@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import aboutBanner from "@/assets/about-banner-robotic.png.asset.json";
+import heroImg from "@/assets/hero-surgeon.png.asset.json";
 import { Bot } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
 import { testimonialsByTopic } from "@/data/testimonials";
