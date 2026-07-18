@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2, Target, Activity, Timer, ShieldCheck, Sparkles } from "lucide-react";
+import { FAQBlock, MythFactBlock, TimelineBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+
 
 export const Route = createFileRoute("/robotic-hip")({
   head: () => ({
@@ -98,6 +100,55 @@ function RoboticHipPage() {
           </div>
         </div>
       </section>
+
+      <TimelineBlock
+        title="Your hip recovery timeline"
+        subtitle="Hip replacement recovery is often faster than patients expect. Here's the typical journey after robotic total hip replacement."
+        steps={[
+          { when: "Day 0", label: "Surgery & first steps", desc: "Procedure takes about 60–90 minutes. Most patients stand and take assisted steps on the same evening." },
+          { when: "Day 1–3", label: "Hospital stay", desc: "Walking with a walker, learning safe hip positions, pain well controlled. Discharge usually on day 2 or 3." },
+          { when: "Week 1–2", label: "Home recovery", desc: "Short walks around the house, chair-and-toilet raisers for safety, home physiotherapy. Sutures removed by day 12." },
+          { when: "Week 3–6", label: "Back to routine", desc: "Walking outdoors, stairs unaided, driving resumed around week 4–6. Most desk work possible from week 2–3." },
+          { when: "Week 6–12", label: "Building strength", desc: "Long walks, gentle cycling, swimming, travel. Full weight-bearing and near-normal function." },
+          { when: "3–6 months", label: "Complete return", desc: "Golf, doubles tennis, hiking and dancing become comfortable again. The hip 'disappears' from daily awareness." },
+        ]}
+      />
+
+      <MythFactBlock
+        title="Hip replacement — what patients get wrong"
+        items={[
+          { myth: "I'll walk with a permanent limp.", fact: "A well-planned hip replacement — especially with robotic guidance — restores leg length and offset accurately, so limping usually resolves within a few weeks." },
+          { myth: "I'll have to sleep only on my back forever.", fact: "Modern surgical approaches and precise cup positioning let most patients sleep on either side comfortably within 4–6 weeks." },
+          { myth: "It's a huge, bloody surgery.", fact: "Robotic-assisted hip replacement is a controlled 60–90 minute procedure with small incisions, minimal muscle disruption and modest blood loss — often no transfusion needed." },
+          { myth: "AVN patients just need painkillers, not surgery.", fact: "Untreated avascular necrosis progressively destroys the femoral head. Early hip replacement gives dramatically better long-term function than waiting for late-stage collapse." },
+          { myth: "The implant will wear out in 10 years.", fact: "Ceramic-on-polyethylene and ceramic-on-ceramic bearings, correctly aligned, are engineered for 25–30 years of use." },
+        ]}
+      />
+
+      <RedFlagsBlock
+        title="When to get your hip evaluated"
+        items={[
+          "Groin pain that radiates to the thigh or knee",
+          "Stiffness putting on socks, shoes or sitting cross-legged",
+          "A limp that has appeared or worsened over months",
+          "Night pain or pain lying on the affected side",
+          "A history of steroid use, alcohol, or hip trauma (AVN risk)",
+          "Reduced walking distance despite physiotherapy and medication",
+        ]}
+      />
+
+      <FAQBlock
+        title="Hip replacement — frequently asked questions"
+        items={[
+          { q: "Will my legs be the same length after surgery?", a: "Yes — that's one of the biggest advantages of robotic hip replacement. Real-time measurement during surgery ensures leg length is restored, usually within 1–2 mm of the healthy side." },
+          { q: "Can I sit on the floor and use Indian toilets?", a: "Most patients can sit on the floor, use Indian toilets and squat modestly after full recovery. The first 6 weeks require some position precautions to protect healing tissues." },
+          { q: "Is robotic hip replacement suitable for AVN?", a: "Absolutely. Robotic assistance is especially valuable in AVN because the surrounding anatomy can be altered — precise planning ensures optimal cup placement and stability." },
+          { q: "How long is the hospital stay?", a: "Usually 2–3 nights. Some fit, well-supported patients go home the next day." },
+          { q: "Will I need a blood transfusion?", a: "Rarely. Modern techniques minimise blood loss to the point where most patients recover without needing any transfusion." },
+          { q: "When can I fly after hip replacement?", a: "Short domestic flights: 2–3 weeks. Long international flights: 6 weeks, with movement, hydration and compression stockings to minimise clot risk." },
+          { q: "Does the implant set off airport scanners?", a: "Occasionally yes. You'll receive an implant identification card to keep with your travel documents." },
+        ]}
+      />
     </PageShell>
   );
 }

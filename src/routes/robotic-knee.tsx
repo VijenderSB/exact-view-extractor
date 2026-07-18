@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2, Target, Activity, Timer, ShieldCheck, Sparkles } from "lucide-react";
+import { FAQBlock, MythFactBlock, TimelineBlock, RedFlagsBlock } from "@/components/site/ContentBlocks";
+
 
 export const Route = createFileRoute("/robotic-knee")({
   head: () => ({
@@ -127,6 +129,57 @@ function RoboticKneePage() {
           </ol>
         </div>
       </section>
+
+      <TimelineBlock
+        title="Your recovery, week by week"
+        subtitle="Most patients follow a predictable arc after robotic knee replacement. Individual timelines vary, but here's the pattern we plan around."
+        steps={[
+          { when: "Day 0", label: "Surgery day", desc: "Procedure typically takes 60–90 minutes per knee. You'll rest, eat a light meal in the evening, and stand with support within 4–6 hours." },
+          { when: "Day 1–2", label: "In hospital", desc: "Walking with a walker, gentle knee bending exercises, pain controlled with oral medication. Most patients go home in 2–3 days." },
+          { when: "Week 1–2", label: "Early home recovery", desc: "Physiotherapy at home, daily walking, stairs with support. Sutures/clips removed around day 12–14." },
+          { when: "Week 3–6", label: "Confidence phase", desc: "Walking without support, driving resumed (right knee: ~4 weeks), most desk work possible from week 3." },
+          { when: "Week 6–12", label: "Strength & routine", desc: "Full return to daily activities, light gym, cycling, swimming. Knee bending progresses toward 120°+." },
+          { when: "3–6 months", label: "Back to your life", desc: "Long walks, travel, dancing, low-impact sport. Most patients say the knee 'feels like their own' by 4–6 months." },
+        ]}
+      />
+
+      <MythFactBlock
+        title="Knee replacement myths patients often hear"
+        items={[
+          { myth: "You should delay surgery for as long as humanly possible.", fact: "Waiting too long can weaken muscles, deform the joint and make recovery harder. The right time is when pain limits your daily life — not when you can no longer walk." },
+          { myth: "I'm too old for knee replacement.", fact: "Age alone is not a barrier. Fitness for surgery matters more than a number — patients in their 70s and 80s do very well when medically optimised." },
+          { myth: "I'll never be able to sit cross-legged again.", fact: "Modern high-flexion implants combined with robotic alignment allow most Indian patients to sit cross-legged and squat comfortably, given time and physiotherapy." },
+          { myth: "Robotic surgery means the robot does the operation.", fact: "The surgeon performs the surgery. The robot is a highly precise guidance tool — like a GPS. Every decision remains a human one." },
+          { myth: "Recovery takes a full year.", fact: "Most patients walk unaided in 2–3 weeks and return to normal life in 6–12 weeks. Fine-tuning continues quietly for a few months more." },
+          { myth: "Implants only last 10 years.", fact: "Current implants combined with accurate alignment routinely last 20–25 years or more in appropriately selected patients." },
+        ]}
+      />
+
+      <RedFlagsBlock
+        title="Signs your knee needs expert evaluation"
+        items={[
+          "Pain that wakes you up at night or persists at rest",
+          "Difficulty climbing stairs, standing from a chair or squatting",
+          "Visible bow-leg or knock-knee deformity that has worsened",
+          "Locking, giving way or grinding sensation in the knee",
+          "Reduced walking distance — less than you managed a year ago",
+          "Painkillers, physiotherapy and injections no longer helping",
+          "Swelling that returns whenever you're active",
+        ]}
+      />
+
+      <FAQBlock
+        title="Frequently asked questions"
+        items={[
+          { q: "Is robotic knee replacement painful?", a: "Modern pain protocols — including nerve blocks, local infiltration and multimodal medication — mean most patients rate their pain 3/10 or lower after surgery. Discomfort settles quickly over the first two weeks." },
+          { q: "How long will I be in hospital?", a: "Typically 2–3 nights. Some patients are discharged the next day if they live nearby, have good support at home and are progressing well with mobilisation." },
+          { q: "When can I climb stairs and drive again?", a: "Stairs with support: within days. Independent stairs: usually 2–3 weeks. Driving (right knee): around 4 weeks; left knee (automatic car): 2 weeks, once you can react safely in an emergency." },
+          { q: "Will I set off airport metal detectors?", a: "Modern implants are titanium and cobalt-chrome and may trigger sensitive scanners. You'll be given an implant card to carry when you travel." },
+          { q: "Can both knees be done at the same time?", a: "Yes — bilateral (both) knee replacement in one anaesthesia is offered to fit patients. It means one recovery instead of two, but requires careful medical assessment." },
+          { q: "How much does robotic knee replacement cost?", a: "Cost depends on hospital tier, implant choice, room category and insurance. Our team will share a clear estimate and help with cashless approvals before you commit." },
+          { q: "How long does the implant last?", a: "In well-aligned, appropriately selected patients, 20+ years is the current expectation. Robotic precision meaningfully improves this longevity by reducing wear from mal-alignment." },
+        ]}
+      />
     </PageShell>
   );
 }
