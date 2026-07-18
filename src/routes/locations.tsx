@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Video, Plane, Building2 } from "lucide-react";
+import { FAQBlock } from "@/components/site/ContentBlocks";
+
 
 export const Route = createFileRoute("/locations")({
   head: () => ({
