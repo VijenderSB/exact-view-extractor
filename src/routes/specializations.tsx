@@ -33,6 +33,7 @@ const groups: Group[] = [
     icon: Bot,
     title: "Core Specializations",
     accent: "primary",
+    href: "/robotic-surgery",
     intro: "Flagship robotic and computer-assisted joint replacement — Dr. Tomar's most requested procedures.",
     items: [
       "Robotic Knee Replacement Surgery",
