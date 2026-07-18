@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import bannerImg from "@/assets/banner-about.jpg";
-import drTomarPortrait from "@/assets/dr-tomar-portrait.jpg";
+import drTomarReal from "@/assets/dr-tomar-real.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
