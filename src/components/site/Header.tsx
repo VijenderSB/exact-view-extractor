@@ -65,15 +65,7 @@ const nav: NavItem[] = [
       { label: "Upper & Lower Limb Trauma", href: "/specializations", hash: "trauma" },
     ],
   },
-  {
-    label: "Resources",
-    children: [
-      { label: "Patient Resources", href: "/patient-resources" },
-      { label: "Locations", href: "/locations" },
-      { label: "All Specializations", href: "/specializations" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Header() {
