@@ -5,7 +5,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { conditions } from "@/data/conditions";
 
-export const Route = createFileRoute("/conditions")({
+export const Route = createFileRoute("/conditions/")({
   head: () => ({
     meta: [
       { title: "Orthopaedic Conditions Treated — Dr. L. Tomar" },
