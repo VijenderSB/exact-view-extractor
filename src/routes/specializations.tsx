@@ -18,6 +18,7 @@ export const Route = createFileRoute("/specializations")({
 });
 
 type Group = {
+  id: string;
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   intro?: string;
