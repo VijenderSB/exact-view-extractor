@@ -30,7 +30,7 @@ const resources = [
 
 function ResourcesPage() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["resources"]} testimonialsTitle={"Patients on our resources"}>
+    <PageShell testimonials={testimonialsByTopic["resources"]} testimonialsTitle={"Patients on our resources"}>
       <PageHero
         eyebrow="Patient Resources"
         title="Everything you need — from your first question to your full recovery."

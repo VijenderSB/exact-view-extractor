@@ -38,7 +38,7 @@ const candidates = [
 
 function RoboticKneePage() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["robotic-knee"]} testimonialsTitle={"Robotic Knee — patient stories"}>
+    <PageShell testimonials={testimonialsByTopic["robotic-knee"]} testimonialsTitle={"Robotic Knee — patient stories"}>
       <PageHero
         eyebrow="Robotic Knee Replacement"
         title="A knee replacement designed around your anatomy — not the other way around."

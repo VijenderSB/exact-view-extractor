@@ -180,7 +180,7 @@ const groups: Group[] = [
 
 function SpecializationsPage() {
   return (
-    <PageShellNone testimonials={testimonialsByTopic["specializations"]} testimonialsTitle={"Patient stories across specialties"}>
+    <PageShell testimonials={testimonialsByTopic["specializations"]} testimonialsTitle={"Patient stories across specialties"}>
       <PageHero
         eyebrow="Specializations"
         title="Full-spectrum orthopaedic care, anchored in robotic precision."
