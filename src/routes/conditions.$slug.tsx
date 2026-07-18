@@ -5,6 +5,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { FAQBlock } from "@/components/site/ContentBlocks";
 import { conditions, getCondition } from "@/data/conditions";
+import { testimonialsByTopic } from "@/data/testimonials";
 
 export const Route = createFileRoute("/conditions/$slug")({
   loader: ({ params }) => {
@@ -63,7 +64,7 @@ function ConditionDetail() {
   const Icon = c.icon;
 
   return (
-    <PageShell>
+    <PageShell testimonials={testimonialsByTopic["conditions"]} testimonialsTitle={"Patients on getting the right diagnosis"}>
       <PageHero
         eyebrow="Conditions Treated"
         title={c.name}
