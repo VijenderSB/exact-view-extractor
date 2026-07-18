@@ -12,6 +12,7 @@ import { Outstation } from "@/components/site/sections/Outstation";
 import { FAQ } from "@/components/site/sections/FAQ";
 import { FinalCTA } from "@/components/site/sections/FinalCTA";
 import { AppointmentSection } from "@/components/site/sections/AppointmentSection";
+import { Testimonials } from "@/components/site/sections/Testimonials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
