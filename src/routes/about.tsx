@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import drTomarReal from "@/assets/dr-tomar-real.png.asset.json";
+import aboutBanner from "@/assets/about-banner-robotic.png.asset.json";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, GraduationCap, Stethoscope, Users, Microscope, HeartPulse, Quote } from "lucide-react";
@@ -49,8 +50,7 @@ function AboutPage() {
         eyebrow="About"
         title="Dr. L. Tomar — precision surgery, guided by decades of experience."
         description="Vice Chairman & Unit Head, Department of Orthopaedic & Joint Replacement at Max Super Speciality Hospital, Patparganj, Delhi. President-Elect, Delhi Orthopaedic Association 2025–26."
-        image={drTomarReal.url}
-        imageFit="contain"
+        image={aboutBanner.url}
       />
 
       <section className="py-20">
