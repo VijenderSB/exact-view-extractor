@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TraumaRouteImport } from './routes/trauma'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 import { Route as SportsInjuryRouteImport } from './routes/sports-injury'
 import { Route as SpecializationsRouteImport } from './routes/specializations'
 import { Route as ShoulderElbowRouteImport } from './routes/shoulder-elbow'
@@ -17,11 +18,13 @@ import { Route as ShoulderRouteImport } from './routes/shoulder'
 import { Route as RoboticSurgeryRouteImport } from './routes/robotic-surgery'
 import { Route as RoboticKneeRouteImport } from './routes/robotic-knee'
 import { Route as RoboticHipRouteImport } from './routes/robotic-hip'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PatientResourcesRouteImport } from './routes/patient-resources'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as KneeRouteImport } from './routes/knee'
 import { Route as HipRouteImport } from './routes/hip'
 import { Route as ElbowRouteImport } from './routes/elbow'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConditionsRouteImport } from './routes/conditions'
 import { Route as ArthroscopyRouteImport } from './routes/arthroscopy'
@@ -31,6 +34,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TraumaRoute = TraumaRouteImport.update({
   id: '/trauma',
   path: '/trauma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SportsInjuryRoute = SportsInjuryRouteImport.update({
@@ -68,6 +76,11 @@ const RoboticHipRoute = RoboticHipRouteImport.update({
   path: '/robotic-hip',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PatientResourcesRoute = PatientResourcesRouteImport.update({
   id: '/patient-resources',
   path: '/patient-resources',
@@ -91,6 +104,11 @@ const HipRoute = HipRouteImport.update({
 const ElbowRoute = ElbowRouteImport.update({
   id: '/elbow',
   path: '/elbow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -125,11 +143,13 @@ export interface FileRoutesByFullPath {
   '/arthroscopy': typeof ArthroscopyRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/elbow': typeof ElbowRoute
   '/hip': typeof HipRoute
   '/knee': typeof KneeRoute
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -137,6 +157,7 @@ export interface FileRoutesByFullPath {
   '/shoulder-elbow': typeof ShoulderElbowRoute
   '/specializations': typeof SpecializationsRoute
   '/sports-injury': typeof SportsInjuryRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
 }
 export interface FileRoutesByTo {
@@ -145,11 +166,13 @@ export interface FileRoutesByTo {
   '/arthroscopy': typeof ArthroscopyRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/elbow': typeof ElbowRoute
   '/hip': typeof HipRoute
   '/knee': typeof KneeRoute
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -157,6 +180,7 @@ export interface FileRoutesByTo {
   '/shoulder-elbow': typeof ShoulderElbowRoute
   '/specializations': typeof SpecializationsRoute
   '/sports-injury': typeof SportsInjuryRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
 }
 export interface FileRoutesById {
@@ -166,11 +190,13 @@ export interface FileRoutesById {
   '/arthroscopy': typeof ArthroscopyRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/elbow': typeof ElbowRoute
   '/hip': typeof HipRoute
   '/knee': typeof KneeRoute
   '/locations': typeof LocationsRoute
   '/patient-resources': typeof PatientResourcesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/robotic-hip': typeof RoboticHipRoute
   '/robotic-knee': typeof RoboticKneeRoute
   '/robotic-surgery': typeof RoboticSurgeryRoute
@@ -178,6 +204,7 @@ export interface FileRoutesById {
   '/shoulder-elbow': typeof ShoulderElbowRoute
   '/specializations': typeof SpecializationsRoute
   '/sports-injury': typeof SportsInjuryRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/trauma': typeof TraumaRoute
 }
 export interface FileRouteTypes {
@@ -188,11 +215,13 @@ export interface FileRouteTypes {
     | '/arthroscopy'
     | '/conditions'
     | '/contact'
+    | '/disclaimer'
     | '/elbow'
     | '/hip'
     | '/knee'
     | '/locations'
     | '/patient-resources'
+    | '/privacy-policy'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -200,6 +229,7 @@ export interface FileRouteTypes {
     | '/shoulder-elbow'
     | '/specializations'
     | '/sports-injury'
+    | '/terms-of-use'
     | '/trauma'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -208,11 +238,13 @@ export interface FileRouteTypes {
     | '/arthroscopy'
     | '/conditions'
     | '/contact'
+    | '/disclaimer'
     | '/elbow'
     | '/hip'
     | '/knee'
     | '/locations'
     | '/patient-resources'
+    | '/privacy-policy'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -220,6 +252,7 @@ export interface FileRouteTypes {
     | '/shoulder-elbow'
     | '/specializations'
     | '/sports-injury'
+    | '/terms-of-use'
     | '/trauma'
   id:
     | '__root__'
@@ -228,11 +261,13 @@ export interface FileRouteTypes {
     | '/arthroscopy'
     | '/conditions'
     | '/contact'
+    | '/disclaimer'
     | '/elbow'
     | '/hip'
     | '/knee'
     | '/locations'
     | '/patient-resources'
+    | '/privacy-policy'
     | '/robotic-hip'
     | '/robotic-knee'
     | '/robotic-surgery'
@@ -240,6 +275,7 @@ export interface FileRouteTypes {
     | '/shoulder-elbow'
     | '/specializations'
     | '/sports-injury'
+    | '/terms-of-use'
     | '/trauma'
   fileRoutesById: FileRoutesById
 }
@@ -249,11 +285,13 @@ export interface RootRouteChildren {
   ArthroscopyRoute: typeof ArthroscopyRoute
   ConditionsRoute: typeof ConditionsRoute
   ContactRoute: typeof ContactRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   ElbowRoute: typeof ElbowRoute
   HipRoute: typeof HipRoute
   KneeRoute: typeof KneeRoute
   LocationsRoute: typeof LocationsRoute
   PatientResourcesRoute: typeof PatientResourcesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RoboticHipRoute: typeof RoboticHipRoute
   RoboticKneeRoute: typeof RoboticKneeRoute
   RoboticSurgeryRoute: typeof RoboticSurgeryRoute
@@ -261,6 +299,7 @@ export interface RootRouteChildren {
   ShoulderElbowRoute: typeof ShoulderElbowRoute
   SpecializationsRoute: typeof SpecializationsRoute
   SportsInjuryRoute: typeof SportsInjuryRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
   TraumaRoute: typeof TraumaRoute
 }
 
@@ -271,6 +310,13 @@ declare module '@tanstack/react-router' {
       path: '/trauma'
       fullPath: '/trauma'
       preLoaderRoute: typeof TraumaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sports-injury': {
@@ -322,6 +368,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RoboticHipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/patient-resources': {
       id: '/patient-resources'
       path: '/patient-resources'
@@ -355,6 +408,13 @@ declare module '@tanstack/react-router' {
       path: '/elbow'
       fullPath: '/elbow'
       preLoaderRoute: typeof ElbowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -401,11 +461,13 @@ const rootRouteChildren: RootRouteChildren = {
   ArthroscopyRoute: ArthroscopyRoute,
   ConditionsRoute: ConditionsRoute,
   ContactRoute: ContactRoute,
+  DisclaimerRoute: DisclaimerRoute,
   ElbowRoute: ElbowRoute,
   HipRoute: HipRoute,
   KneeRoute: KneeRoute,
   LocationsRoute: LocationsRoute,
   PatientResourcesRoute: PatientResourcesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   RoboticHipRoute: RoboticHipRoute,
   RoboticKneeRoute: RoboticKneeRoute,
   RoboticSurgeryRoute: RoboticSurgeryRoute,
@@ -413,6 +475,7 @@ const rootRouteChildren: RootRouteChildren = {
   ShoulderElbowRoute: ShoulderElbowRoute,
   SpecializationsRoute: SpecializationsRoute,
   SportsInjuryRoute: SportsInjuryRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
   TraumaRoute: TraumaRoute,
 }
 export const routeTree = rootRouteImport
