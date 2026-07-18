@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-trauma.jpg";
 import { ShieldPlus } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
 
@@ -41,6 +42,7 @@ export const Route = createFileRoute("/trauma")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    />
+    image={bannerImg}
+      />
   ),
 });

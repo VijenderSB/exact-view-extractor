@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-robotic-surgery.jpg";
 import { Bot } from "lucide-react";
 import { SpecializationPage } from "@/components/site/SpecializationPage";
 
@@ -45,6 +46,7 @@ export const Route = createFileRoute("/robotic-surgery")({
         { label: "All Specializations", to: "/specializations" },
         { label: "Book a Consultation", to: "/contact" },
       ]}
-    />
+    image={bannerImg}
+      />
   ),
 });

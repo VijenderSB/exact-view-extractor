@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-shoulder-elbow.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2 } from "lucide-react";
@@ -33,6 +34,7 @@ function ShoulderPage() {
         eyebrow="Shoulder & Elbow"
         title="Freedom to reach, lift, throw and rest — without pain."
         description="From common overuse injuries to complex reconstructive surgery, Dr. Tomar's shoulder and elbow practice covers the full spectrum — always weighted toward the least invasive option that will work."
+      image={bannerImg}
       />
 
       <section className="py-20">

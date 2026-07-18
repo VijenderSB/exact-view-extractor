@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-locations.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { MapPin, Clock, Phone, Video, Plane, Building2 } from "lucide-react";
@@ -45,6 +46,7 @@ function LocationsPage() {
         eyebrow="Clinics & Locations"
         title="Meet Dr. Tomar in Delhi NCR — or online."
         description="Consultations are available across multiple partner hospitals in Delhi, Gurgaon and Noida. Video consultations are available for review visits and outstation patients."
+      image={bannerImg}
       />
 
       <section className="py-20">

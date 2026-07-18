@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bannerImg from "@/assets/banner-patient-resources.jpg";
 import { PageShell } from "@/components/site/PageShell";
 import { PageHero } from "@/components/site/PageHero";
 import { FileText, HelpCircle, HeartPulse, Download, ClipboardCheck, Users } from "lucide-react";
@@ -33,6 +34,7 @@ function ResourcesPage() {
         eyebrow="Patient Resources"
         title="Everything you need — from your first question to your full recovery."
         description="A well-prepared patient recovers faster. These guides, checklists and answers are designed to keep you informed, confident and in control throughout your journey."
+      image={bannerImg}
       />
 
       <section className="py-20">
