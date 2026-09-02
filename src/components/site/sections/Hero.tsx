@@ -1,16 +1,16 @@
-import heroImg from "@/assets/hero-robotic-v2.png.asset.json";
+import heroImg from "@/assets/hero-robotic-v3.png.asset.json";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px] text-primary-foreground">
-      {/* full-bleed background image */}
+    <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px] text-primary-foreground bg-[#050a14]">
+      {/* full-bleed background image - shown uncropped and unstretched */}
       <img
         src={heroImg.url}
-        alt="VELYS robotic-assisted surgical system performing knee surgery"
-        width={1448}
-        height={1086}
-        className="absolute inset-0 h-full w-full object-cover scale-[1.2]"
+        alt="VELYS robotic-assisted surgical system performing knee surgery with Dr. L. Tomar"
+        width={1774}
+        height={887}
+        className="absolute inset-0 h-full w-full object-contain"
       />
       {/* dark overlay for readability - tuned to the image's deep blue-teal palette */}
       <div
