@@ -12,10 +12,10 @@ export function Hero() {
         height={887}
         className="absolute inset-0 h-full w-full object-contain"
       />
-      {/* dark overlay for readability - tuned to the image's deep blue-teal palette */}
+      {/* dark overlay for readability - lighter so the VELYS image remains visible */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-[oklch(0.14_0.06_255/0.96)] via-[oklch(0.16_0.07_265/0.78)] to-[oklch(0.18_0.08_285/0.35)]"
+        className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.05_255/0.84)] via-[oklch(0.15_0.06_265/0.58)] to-[oklch(0.18_0.07_285/0.22)]"
       />
 
       <div className="container-page relative z-10 flex items-center min-h-[600px] lg:min-h-[700px] py-20 md:py-28">
