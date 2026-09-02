@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-surgeon.png.asset.json";
+import heroImg from "@/assets/hero-robotic-v2.png.asset.json";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 export function Hero() {
@@ -7,15 +7,15 @@ export function Hero() {
       {/* full-bleed background image */}
       <img
         src={heroImg.url}
-        alt="Dr. L. Tomar with the VELYS robotic-assisted surgical system"
+        alt="VELYS robotic-assisted surgical system performing knee surgery"
         width={1448}
         height={1086}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover scale-[1.2]"
       />
-      {/* dark overlay for readability */}
+      {/* dark overlay for readability - tuned to the image's deep blue-teal palette */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-[oklch(0.18_0.09_285/0.95)] via-[oklch(0.18_0.09_285/0.70)] to-[oklch(0.18_0.09_285/0.30)]"
+        className="absolute inset-0 bg-gradient-to-r from-[oklch(0.14_0.06_255/0.96)] via-[oklch(0.16_0.07_265/0.78)] to-[oklch(0.18_0.08_285/0.35)]"
       />
 
       <div className="container-page relative z-10 flex items-center min-h-[600px] lg:min-h-[700px] py-20 md:py-28">
