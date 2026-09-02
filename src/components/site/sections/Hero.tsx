@@ -1,4 +1,5 @@
 import heroImg from "@/assets/hero-robotic-v3.png.asset.json";
+import heroMobileImg from "@/assets/hero-mobile.png.asset.json";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 export function Hero() {
